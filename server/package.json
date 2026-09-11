@@ -1,0 +1,33 @@
+{
+  "name": "mm-mysalesforcedemo-server",
+  "version": "1.0.0",
+  "description": "Express + TypeScript + Prisma API server.",
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "prisma generate && tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate deploy",
+    "heroku-postbuild": "npm --prefix ../client install && npm --prefix ../client run build && rimraf public && copyfiles -u 3 \"../client/dist/**/*\" public && npm run build"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.10.0",
+    "copyfiles": "^2.4.1",
+    "prisma": "^5.22.0",
+    "rimraf": "^6.0.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.7.2"
+  }
+}
