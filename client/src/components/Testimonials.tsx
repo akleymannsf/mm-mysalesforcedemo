@@ -114,7 +114,7 @@ export default function Testimonials() {
             Two very different Mondays
           </h2>
           <p className="mt-4 text-lg text-brand-ink/60">
-            The same work, with and without an agentic teammate operating your org.
+            The same work, with and without an agentic teammate doing the busy work.
           </p>
         </Reveal>
 
