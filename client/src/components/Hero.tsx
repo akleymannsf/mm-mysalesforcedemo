@@ -40,12 +40,12 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.05 }}
           >
-            <span className="eyebrow">
+            <span className="eyebrow normal-case tracking-normal">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-pulse-ring rounded-full bg-brand-cyan" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-cyan" />
               </span>
-              Agentic AI for the Salesforce Enterprise
+              Ask for what you need. MeshMesh does the rest.
             </span>
           </motion.div>
 
