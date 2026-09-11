@@ -10,7 +10,6 @@ interface Badge {
 const BADGES: Badge[] = [
   { icon: '🛡️', title: 'SOC 2 Type II', sub: 'Independently audited controls' },
   { icon: '📋', title: 'ISO 42001', sub: 'Responsible AI management' },
-  { icon: '✅', title: 'AppExchange Partner', sub: 'Salesforce-verified product' },
   { icon: '🔒', title: 'Zero Training · Zero Retention', sub: 'Your data is never used to train' },
 ];
 
@@ -31,7 +30,7 @@ export default function Security() {
           </p>
         </Reveal>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {BADGES.map((b, i) => (
             <Reveal key={b.title} delay={i * 0.08}>
               <motion.div
