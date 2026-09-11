@@ -5,7 +5,7 @@ import { YOUTUBE_EMBED, YOUTUBE_TITLE } from '../lib/sections';
 const HIGHLIGHTS = [
   'Approve each step — nothing runs without your consent',
   'Watch every step live, or step away with confidence',
-  'Builds real-world, production-grade solutions, not just ideas',
+  'Delivers real-world, production-grade solutions, not just ideas',
 ];
 
 export default function Demo() {
