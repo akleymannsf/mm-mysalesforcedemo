@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import Reveal from './Reveal';
-import { VIDEO_SRC } from '../lib/sections';
+import { YOUTUBE_EMBED, YOUTUBE_TITLE } from '../lib/sections';
 
 const HIGHLIGHTS = [
   'Watch every action happen live in a real browser',
@@ -37,22 +37,22 @@ export default function Demo() {
               <span className="h-3 w-3 rounded-full bg-[#FEBC2E]" />
               <span className="h-3 w-3 rounded-full bg-[#28C840]" />
               <div className="mx-auto flex max-w-md flex-1 items-center justify-center gap-2 rounded-md bg-white/10 px-3 py-1 text-xs font-medium text-white/60">
-                <span className="text-brand-teal">🔒</span> BrowserMesh — Flow Audit Report
+                <span className="text-brand-teal">🔒</span> MeshMesh Studio — Insights to Execution
               </div>
               <span className="hidden rounded-full bg-brand-cyan/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-brand-cyan sm:inline">
-                Live
+                Full Demo
               </span>
             </div>
-            <video
-              className="aspect-video w-full bg-black"
-              src={VIDEO_SRC}
-              controls
-              muted
-              loop
-              autoPlay
-              playsInline
-              preload="metadata"
-            />
+            <div className="aspect-video w-full bg-black">
+              <iframe
+                className="h-full w-full"
+                src={YOUTUBE_EMBED}
+                title={YOUTUBE_TITLE}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
           </div>
 
           {/* Floating badges */}

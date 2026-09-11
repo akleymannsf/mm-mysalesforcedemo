@@ -14,3 +14,8 @@ export const NAV_SECTIONS: NavSection[] = [
 
 export const VIDEO_SRC =
   'https://meshmesh.io/videos/BrowserMesh%20Flow%20Audit%20Report.mp4';
+
+// Full walkthrough hosted on YouTube.
+export const YOUTUBE_EMBED = 'https://www.youtube.com/embed/pZUww11bRt8';
+export const YOUTUBE_TITLE =
+  'Automating Salesforce with MeshMesh Studio: From Insights to Execution in Minutes';
