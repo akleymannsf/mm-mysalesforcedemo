@@ -6,6 +6,7 @@ const HIGHLIGHTS = [
   'Watch every action happen live in a real browser',
   'Approve each step — nothing runs without your consent',
   'Ships production-grade work, not just suggestions',
+  'Or step away knowing the agents only act on your defined plan',
 ];
 
 export default function Demo() {
@@ -72,7 +73,7 @@ export default function Demo() {
           </motion.div>
         </Reveal>
 
-        <Reveal delay={0.2} className="mx-auto mt-12 grid max-w-4xl gap-4 sm:grid-cols-3">
+        <Reveal delay={0.2} className="mx-auto mt-12 grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {HIGHLIGHTS.map((h) => (
             <div
               key={h}
