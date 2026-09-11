@@ -65,10 +65,11 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mx-auto mt-6 max-w-2xl text-pretty text-lg text-brand-ink/70 sm:text-xl"
           >
-            MeshMesh is the AI assistant that operates your Salesforce products for you —
-            planning, configuring, and shipping work. Save{' '}
-            <span className="font-bold text-brand-navy">120+ hours a month</span> and cut
-            implementation complexity to a conversation.
+            Salesforce’s AI-native, agent-driven solution that makes using and implementing any
+            Salesforce product simple. Rapidly diagnose challenges, apply a fix, and ship
+            innovation — saving{' '}
+            <span className="font-bold text-brand-navy">120+ hours a month</span> and cutting time to
+            value. Conversation, not configuration.
           </motion.p>
 
           <motion.div
@@ -115,9 +116,6 @@ export default function Hero() {
               <span className="h-3 w-3 rounded-full bg-[#FF5F57]" />
               <span className="h-3 w-3 rounded-full bg-[#FEBC2E]" />
               <span className="h-3 w-3 rounded-full bg-[#28C840]" />
-              <div className="mx-auto flex max-w-sm flex-1 items-center justify-center gap-2 rounded-md bg-white/80 px-3 py-1 text-xs font-medium text-brand-navy/50">
-                <span className="text-brand-teal">🔒</span> app.meshmesh.io/build
-              </div>
             </div>
             <video
               className="aspect-video w-full bg-brand-navy object-cover"
