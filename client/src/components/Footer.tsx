@@ -13,14 +13,19 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="relative bg-brand-navy py-14 text-white">
+    <footer className="relative">
+      {/* White logo band above the navy footer */}
+      <div className="bg-white py-10">
+        <div className="container-xl flex justify-center md:justify-start">
+          <img src={logo} alt="MeshMesh from Salesforce" className="h-9 w-auto sm:h-10" />
+        </div>
+      </div>
+
+      <div className="bg-brand-navy py-14 text-white">
       <div className="container-xl">
         <div className="flex flex-col items-center justify-between gap-8 border-b border-white/10 pb-10 md:flex-row md:items-start">
           <div className="text-center md:text-left">
-            <span className="inline-flex h-14 items-center rounded-xl bg-white px-4 shadow-sm">
-              <img src={logo} alt="MeshMesh from Salesforce" className="h-8 w-auto" />
-            </span>
-            <p className="mt-4 max-w-xs text-sm text-white/60">
+            <p className="max-w-xs text-sm text-white/60">
               The agentic AI assistant for the Salesforce enterprise and beyond. Plan and build by
               simply asking.
             </p>
@@ -47,6 +52,7 @@ export default function Footer() {
             SOC 2 · ISO 42001 · Zero Training · Zero Retention
           </p>
         </div>
+      </div>
       </div>
 
       {/* Back to top */}
