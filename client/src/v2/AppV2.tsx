@@ -109,9 +109,9 @@ function Nav() {
         <div className="flex items-center gap-4">
           <a
             href="#security"
-            className="hidden font-mono text-[11px] uppercase tracking-[0.2em] text-ink transition-transform hover:-translate-y-0.5 sm:inline-flex"
+            className="hidden font-mono text-[11px] uppercase tracking-[0.2em] text-white transition-transform hover:-translate-y-0.5 sm:inline-flex"
           >
-            <span className="rounded-full bg-acid px-4 py-2">Nominate a hero →</span>
+            <span className="rounded-full bg-brand-blue px-4 py-2">Nominate a hero →</span>
           </a>
           <button
             type="button"
@@ -152,7 +152,7 @@ function Nav() {
             <a
               href="#security"
               onClick={() => setOpen(false)}
-              className="mx-5 mt-6 block rounded-full bg-acid px-5 py-4 text-center font-mono text-xs uppercase tracking-[0.2em] text-ink"
+              className="mx-5 mt-6 block rounded-full bg-brand-blue px-5 py-4 text-center font-mono text-xs uppercase tracking-[0.2em] text-white"
             >
               Nominate a customer hero →
             </a>
@@ -235,7 +235,7 @@ function Hero() {
             >
               <a
                 href="#demo"
-                className="rounded-full bg-acid px-7 py-3.5 font-mono text-xs uppercase tracking-[0.2em] text-ink transition-transform hover:-translate-y-0.5"
+                className="rounded-full bg-brand-blue px-7 py-3.5 font-mono text-xs uppercase tracking-[0.2em] text-white transition-transform hover:-translate-y-0.5"
               >
                 See it in action →
               </a>
@@ -736,7 +736,7 @@ function Footer() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             aria-label="Back to top"
-            className="fixed bottom-6 right-6 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-acid font-mono text-ink"
+            className="fixed bottom-6 right-6 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-brand-blue font-mono text-white"
           >
             ↑
           </motion.a>
