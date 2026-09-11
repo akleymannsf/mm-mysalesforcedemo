@@ -65,11 +65,11 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mx-auto mt-6 max-w-2xl text-pretty text-lg text-brand-ink/70 sm:text-xl"
           >
-            Salesforce’s AI-native, agent-driven solution that makes using and implementing any
-            Salesforce product simple. Rapidly diagnose challenges, apply a fix, and ship
-            innovation — saving{' '}
-            <span className="font-bold text-brand-navy">120+ hours a month</span> and cutting time to
-            value. Conversation, not configuration.
+            MeshMesh is Salesforce’s AI-native, agent-driven teammate that operates your entire tech
+            stack — Salesforce and beyond — for you. Rapidly diagnose challenges, apply a fix, and
+            ship innovation, saving{' '}
+            <span className="font-bold text-brand-navy">120+ hours a month</span>. Conversation, not
+            configuration.
           </motion.p>
 
           <motion.div
