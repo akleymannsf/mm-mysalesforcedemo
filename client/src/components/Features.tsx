@@ -53,7 +53,7 @@ export default function Features() {
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="eyebrow">Capabilities</span>
           <h2 className="mt-5 text-3xl font-black tracking-tight text-brand-navy sm:text-5xl">
-            One assistant, your <span className="text-gradient-ai">entire estate</span>
+            One assistant, your <span className="text-gradient-ai">entire tech stack</span>
           </h2>
           <p className="mt-4 text-lg text-brand-ink/60">
             MeshMesh operates across the Salesforce products you already run.
