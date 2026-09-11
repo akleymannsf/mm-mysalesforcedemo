@@ -85,9 +85,9 @@ function Nav() {
           : 'border-b border-ink/10'
       }`}
     >
-      <nav className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-5 sm:px-10">
+      <nav className="mx-auto flex h-20 max-w-[1400px] items-center justify-between px-5 sm:h-24 sm:px-10">
         <a href="#overview" className="flex items-center gap-3" aria-label="MeshMesh home">
-          <img src={logo} alt="MeshMesh from Salesforce" className="h-9 w-auto sm:h-10" />
+          <img src={logo} alt="MeshMesh from Salesforce" className="h-11 w-auto sm:h-14" />
         </a>
 
         <ul className="hidden items-center gap-6 md:flex">
@@ -131,7 +131,7 @@ function Nav() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 top-16 z-40 bg-white md:hidden"
+            className="fixed inset-0 top-20 z-40 bg-white sm:top-24 md:hidden"
           >
             <ul className="flex flex-col divide-y divide-ink/10 border-t border-ink/10">
               {NAV_SECTIONS.map((s, i) => (
@@ -169,7 +169,7 @@ function Nav() {
 
 function Hero() {
   return (
-    <section id="overview" className="relative overflow-hidden pt-28 sm:pt-36">
+    <section id="overview" className="relative overflow-hidden pt-32 sm:pt-44">
       {/* backdrop */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         {/* smooth transition from the white header into the dark canvas */}
