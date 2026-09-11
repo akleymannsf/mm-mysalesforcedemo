@@ -23,9 +23,9 @@ export default function Demo() {
             Watch as the work <span className="text-gradient-ai">gets done</span>
           </h2>
           <p className="mt-4 text-lg text-white/70">
-            MeshMesh is like a team of junior developers, acting on your plan, testing its own work, and
-            documenting every step. You’re always in the loop — collaboratively planning and
-            validating the output before anything goes live.
+            MeshMesh is like a team of junior developers, acting on your plan, doing every click,
+            testing its own work, and documenting every step. You’re always in the loop —
+            collaboratively planning and validating the output before anything goes live.
           </p>
         </Reveal>
 
