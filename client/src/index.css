@@ -1,3 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Offset so sticky navbar doesn't cover anchored section headings */
+    scroll-padding-top: 5.5rem;
+  }
+
+  body {
+    @apply bg-white text-brand-ink font-sans antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Section anchor offset for jump links */
+  section[id] {
+    scroll-margin-top: 5.5rem;
+  }
+}
+
+@layer components {
+  .container-xl {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-brand-blue/20 bg-brand-blue/5
+      px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-brand-blue;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-brand-blue px-6 py-3
+      text-sm font-bold text-white shadow-glow-blue transition-all duration-300
+      hover:-translate-y-0.5 hover:bg-brand-blue-dark hover:shadow-glow focus:outline-none
+      focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-brand-navy/15
+      bg-white/70 px-6 py-3 text-sm font-bold text-brand-navy backdrop-blur
+      transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-blue/40 hover:text-brand-blue;
+  }
+
+  /* Animated AI gradient text */
+  .text-gradient-ai {
+    @apply bg-gradient-to-r from-brand-blue via-brand-cyan to-brand-teal bg-clip-text text-transparent;
+    background-size: 200% auto;
+    @apply animate-gradient-x;
+  }
+
+  /* Glass surface */
+  .glass {
+    @apply border border-white/60 bg-white/70 backdrop-blur-xl;
+  }
+
+  .glass-dark {
+    @apply border border-white/10 bg-white/5 backdrop-blur-xl;
+  }
+}
+
+@layer utilities {
+  .mask-fade-x {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent
+    );
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
