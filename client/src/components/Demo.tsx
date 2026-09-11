@@ -23,8 +23,9 @@ export default function Demo() {
             Watch as the work <span className="text-gradient-ai">gets done</span>
           </h2>
           <p className="mt-4 text-lg text-white/70">
-            No black boxes. MeshMesh operates your org in a live browser session while you stay in
-            full control — pausing, approving, and steering every step.
+            MeshMesh is a team of junior developers, acting on your plan, testing its own work, and
+            documenting every step. You’re always in the loop — collaboratively planning and
+            validating the output before you go live.
           </p>
         </Reveal>
 
