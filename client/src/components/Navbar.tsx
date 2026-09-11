@@ -109,7 +109,7 @@ export default function Navbar() {
             Sign In
           </a>
           <a href="#demo" className="btn-primary hidden !py-2.5 sm:inline-flex">
-            Try Easy Mode
+            See It In Action
             <span aria-hidden>→</span>
           </a>
 
@@ -188,7 +188,7 @@ export default function Navbar() {
                   onClick={() => setOpen(false)}
                   className="btn-primary mt-2 w-full"
                 >
-                  Try Easy Mode →
+                  See It In Action →
                 </a>
               </div>
             </motion.div>
