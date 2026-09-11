@@ -96,10 +96,10 @@ function Nav() {
               <a
                 href={`#${s.id}`}
                 className={`font-mono text-[11px] uppercase tracking-[0.2em] transition-colors ${
-                  active === s.id ? 'text-acid' : 'text-ink/45 hover:text-ink'
+                  active === s.id ? 'text-acid' : 'text-ink hover:text-acid'
                 }`}
               >
-                <span className="text-ink/25">{String(i + 1).padStart(2, '0')} </span>
+                <span className="text-ink/50">{String(i + 1).padStart(2, '0')} </span>
                 {s.label}
               </a>
             </li>
@@ -702,7 +702,7 @@ function Footer() {
         <img src={logo} alt="MeshMesh from Salesforce" className="h-9 w-auto sm:h-10" />
 
         <div className="mt-10 grid gap-8 border-b border-ink/10 pb-10 md:grid-cols-12">
-          <p className="max-w-sm font-display text-2xl text-ink/70 md:col-span-6">
+          <p className="max-w-sm font-display text-2xl text-ink md:col-span-6">
             The agentic AI assistant for the Salesforce enterprise and beyond. Plan and build by
             simply asking.
           </p>
@@ -711,7 +711,7 @@ function Footer() {
               <a
                 key={s.id}
                 href={`#${s.id}`}
-                className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink/50 transition-colors hover:text-acid"
+                className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink transition-colors hover:text-acid"
               >
                 {s.label}
               </a>
@@ -719,10 +719,10 @@ function Footer() {
           </nav>
         </div>
         <div className="flex flex-col justify-between gap-3 pt-6 sm:flex-row">
-          <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-ink/40">
+          <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-ink">
             © {new Date().getFullYear()} MeshMesh — a Salesforce Product
           </p>
-          <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-ink/40">
+          <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-ink">
             SOC 2 · ISO 42001 · Zero Training · Zero Retention
           </p>
         </div>
