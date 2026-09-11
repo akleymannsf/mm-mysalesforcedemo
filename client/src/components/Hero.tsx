@@ -55,7 +55,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.05 }}
             className="mt-6 text-balance text-4xl font-black leading-[1.05] tracking-tight text-brand-navy sm:text-6xl lg:text-7xl"
           >
-            MeshMesh makes the complex,
+            MeshMesh makes the complex
             <br className="hidden sm:block" /> Salesforce <span className="text-gradient-ai">simple</span>.
           </motion.h1>
 
