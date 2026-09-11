@@ -354,7 +354,7 @@ const PRODUCTS = [
 
 function Marquee() {
   return (
-    <section className="border-y border-paper/10 py-6">
+    <section className="mt-2.5 border-y border-paper/10 py-6">
       <div className="flex overflow-hidden">
         {[0, 1].map((row) => (
           <div
