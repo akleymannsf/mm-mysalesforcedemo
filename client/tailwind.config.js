@@ -14,9 +14,10 @@ export default {
           teal: '#2DD4BF',
         },
         // v2 editorial palette
-        ink: '#0B0B0C',
+        // deep navy derived from the MeshMesh logo blue (#205090), darkened for a canvas
+        ink: '#08203F',
         paper: '#F4F1EA',
-        // signature accent (kept under the `acid` key to avoid churn) — now electric blue
+        // signature accent (kept under the `acid` key to avoid churn) — electric blue
         acid: '#1B96FF',
       },
       fontFamily: {
