@@ -64,7 +64,7 @@ export default function Security() {
                 href="#demo"
                 className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-bold text-brand-navy transition-all hover:-translate-y-0.5 hover:shadow-glow sm:w-auto"
               >
-                Get Started <span aria-hidden>→</span>
+                Nominate a Customer Hero <span aria-hidden>→</span>
               </a>
             </div>
           </div>
