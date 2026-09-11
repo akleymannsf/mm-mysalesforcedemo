@@ -17,8 +17,12 @@ export default function Footer() {
       <div className="container-xl">
         <div className="flex flex-col items-center justify-between gap-8 border-b border-white/10 pb-10 md:flex-row md:items-start">
           <div className="text-center md:text-left">
-            <span className="inline-flex h-10 items-center overflow-hidden rounded-lg bg-white/10 px-3">
-              <img src={logo} alt="MeshMesh" className="h-5 w-auto" />
+            <span className="inline-flex h-14 items-center rounded-xl bg-white/5 px-4">
+              <img
+                src={logo}
+                alt="MeshMesh from Salesforce"
+                className="h-8 w-auto mix-blend-screen"
+              />
             </span>
             <p className="mt-4 max-w-xs text-sm text-white/60">
               The agentic AI assistant for the Salesforce enterprise. Plan and build by simply

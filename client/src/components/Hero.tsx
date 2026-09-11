@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import logo from '../assets/logo.jpg';
 import { VIDEO_SRC } from '../lib/sections';
 
 const PRODUCTS = ['Sales Cloud', 'Service Cloud', 'Data 360', 'Agentforce', 'Flows'];
@@ -20,9 +21,24 @@ export default function Hero() {
       <div className="container-xl">
         <div className="mx-auto max-w-4xl text-center">
           <motion.div
+            initial={{ opacity: 0, y: 16, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            className="mb-7 flex justify-center"
+          >
+            <span className="inline-flex items-center rounded-2xl bg-brand-navy px-6 py-3.5 shadow-float">
+              <img
+                src={logo}
+                alt="MeshMesh from Salesforce"
+                className="h-9 w-auto mix-blend-screen sm:h-11"
+              />
+            </span>
+          </motion.div>
+
+          <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6, delay: 0.05 }}
           >
             <span className="eyebrow">
               <span className="relative flex h-2 w-2">

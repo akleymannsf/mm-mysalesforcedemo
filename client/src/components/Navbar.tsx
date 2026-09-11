@@ -40,17 +40,16 @@ export default function Navbar() {
           }`}
         >
           {/* Brand */}
-          <a href="#overview" className="group flex items-center gap-3" aria-label="MeshMesh home">
-            <span className="flex h-9 items-center overflow-hidden rounded-lg bg-brand-navy px-2.5 shadow-sm">
-              <img src={logo} alt="MeshMesh" className="h-5 w-auto" />
+          <a href="#overview" className="group flex items-center gap-2.5" aria-label="MeshMesh home">
+            <span className="flex h-10 items-center rounded-xl bg-brand-navy px-3 shadow-sm">
+              <img
+                src={logo}
+                alt="MeshMesh from Salesforce"
+                className="h-6 w-auto mix-blend-screen"
+              />
             </span>
-            <span className="hidden flex-col leading-none sm:flex">
-              <span className="text-sm font-extrabold tracking-tight text-brand-navy">
-                MeshMesh
-              </span>
-              <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.15em] text-brand-blue">
-                Salesforce Product
-              </span>
+            <span className="hidden rounded-full border border-brand-blue/20 bg-brand-blue/5 px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.14em] text-brand-blue sm:inline">
+              Product
             </span>
           </a>
 
