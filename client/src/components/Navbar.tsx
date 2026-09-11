@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logo.png';
 import { NAV_SECTIONS } from '../lib/sections';
 import { useActiveSection } from '../hooks/useActiveSection';
 
@@ -41,11 +41,11 @@ export default function Navbar() {
         >
           {/* Brand */}
           <a href="#overview" className="group flex items-center gap-2.5" aria-label="MeshMesh home">
-            <span className="flex h-10 items-center rounded-xl bg-brand-navy px-3 shadow-sm">
+            <span className="flex h-10 items-center">
               <img
                 src={logo}
                 alt="MeshMesh from Salesforce"
-                className="h-6 w-auto mix-blend-screen"
+                className="h-6 w-auto sm:h-7"
               />
             </span>
             <span className="hidden rounded-full border border-brand-blue/20 bg-brand-blue/5 px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.14em] text-brand-blue sm:inline">

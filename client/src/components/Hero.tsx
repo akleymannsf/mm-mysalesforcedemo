@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logo.png';
 import { VIDEO_SRC } from '../lib/sections';
 
 const PRODUCTS = ['Sales Cloud', 'Service Cloud', 'Data 360', 'Agentforce', 'Flows'];
@@ -26,11 +26,11 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="mb-7 flex justify-center"
           >
-            <span className="inline-flex items-center rounded-2xl bg-brand-navy px-6 py-3.5 shadow-float">
+            <span className="inline-flex items-center rounded-2xl bg-white px-6 py-4 shadow-card ring-1 ring-brand-navy/5">
               <img
                 src={logo}
                 alt="MeshMesh from Salesforce"
-                className="h-9 w-auto mix-blend-screen sm:h-11"
+                className="h-10 w-auto sm:h-12"
               />
             </span>
           </motion.div>
