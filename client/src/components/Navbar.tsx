@@ -12,7 +12,7 @@ export default function Navbar() {
   const active = useActiveSection(SECTION_IDS);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
@@ -27,89 +27,91 @@ export default function Navbar() {
   }, [open]);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
-      <div className="container-xl pt-3 sm:pt-4">
-        <motion.nav
-          initial={{ y: -30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5, ease: 'easeOut' }}
-          className={`flex items-center justify-between rounded-2xl px-4 py-2.5 transition-all duration-300 sm:px-5 ${
-            scrolled
-              ? 'glass shadow-card'
-              : 'border border-transparent bg-white/40 backdrop-blur-md'
-          }`}
-        >
-          {/* Brand */}
-          <a href="#overview" className="group flex items-center gap-2.5" aria-label="MeshMesh home">
-            <span className="flex h-10 items-center">
-              <img
-                src={logo}
-                alt="MeshMesh from Salesforce"
-                className="h-6 w-auto sm:h-7"
-              />
-            </span>
+    <motion.header
+      initial={{ y: -24, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+      className={`fixed inset-x-0 top-0 z-50 bg-white transition-shadow duration-300 ${
+        scrolled
+          ? 'shadow-[0_1px_0_rgba(3,45,96,0.08),0_10px_30px_-18px_rgba(3,45,96,0.35)]'
+          : 'border-b border-brand-navy/5'
+      }`}
+    >
+      <nav className="container-xl flex h-16 items-center justify-between sm:h-[70px]">
+        {/* Brand */}
+        <a href="#overview" className="flex items-center" aria-label="MeshMesh home">
+          <img
+            src={logo}
+            alt="MeshMesh from Salesforce"
+            className="h-7 w-auto sm:h-8"
+          />
+        </a>
+
+        {/* Desktop nav */}
+        <ul className="hidden items-center gap-7 lg:flex">
+          {NAV_SECTIONS.map((s) => (
+            <li key={s.id}>
+              <a
+                href={`#${s.id}`}
+                className={`relative py-2 text-[15px] font-semibold transition-colors ${
+                  active === s.id
+                    ? 'text-brand-blue'
+                    : 'text-brand-navy/75 hover:text-brand-navy'
+                }`}
+              >
+                {s.label}
+                {active === s.id && (
+                  <motion.span
+                    layoutId="nav-underline"
+                    className="absolute -bottom-0.5 left-0 right-0 h-0.5 rounded-full bg-brand-blue"
+                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                  />
+                )}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <div className="flex items-center gap-3">
+          <a
+            href="#security"
+            className="hidden text-[15px] font-semibold text-brand-navy/75 transition-colors hover:text-brand-navy md:inline"
+          >
+            Sign In
+          </a>
+          <a href="#demo" className="btn-primary hidden !py-2.5 sm:inline-flex">
+            Try Easy Mode
+            <span aria-hidden>→</span>
           </a>
 
-          {/* Desktop nav */}
-          <ul className="hidden items-center gap-1 lg:flex">
-            {NAV_SECTIONS.map((s) => (
-              <li key={s.id}>
-                <a
-                  href={`#${s.id}`}
-                  className={`relative rounded-full px-3.5 py-2 text-sm font-semibold transition-colors ${
-                    active === s.id
-                      ? 'text-brand-blue'
-                      : 'text-brand-navy/70 hover:text-brand-navy'
-                  }`}
-                >
-                  {s.label}
-                  {active === s.id && (
-                    <motion.span
-                      layoutId="nav-pill"
-                      className="absolute inset-0 -z-10 rounded-full bg-brand-blue/10"
-                      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                    />
-                  )}
-                </a>
-              </li>
-            ))}
-          </ul>
-
-          <div className="flex items-center gap-2">
-            <a href="#demo" className="btn-primary hidden sm:inline-flex">
-              Try Easy Mode
-              <span aria-hidden>→</span>
-            </a>
-
-            {/* Hamburger */}
-            <button
-              type="button"
-              onClick={() => setOpen((v) => !v)}
-              aria-label={open ? 'Close menu' : 'Open menu'}
-              aria-expanded={open}
-              className="flex h-10 w-10 items-center justify-center rounded-xl border border-brand-navy/10 bg-white/70 text-brand-navy lg:hidden"
-            >
-              <div className="relative h-4 w-5">
-                <span
-                  className={`absolute left-0 top-0 h-0.5 w-5 rounded bg-current transition-all duration-300 ${
-                    open ? 'top-1.5 rotate-45' : ''
-                  }`}
-                />
-                <span
-                  className={`absolute left-0 top-1.5 h-0.5 w-5 rounded bg-current transition-all duration-300 ${
-                    open ? 'opacity-0' : ''
-                  }`}
-                />
-                <span
-                  className={`absolute left-0 top-3 h-0.5 w-5 rounded bg-current transition-all duration-300 ${
-                    open ? 'top-1.5 -rotate-45' : ''
-                  }`}
-                />
-              </div>
-            </button>
-          </div>
-        </motion.nav>
-      </div>
+          {/* Hamburger */}
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+            className="flex h-10 w-10 items-center justify-center rounded-xl border border-brand-navy/10 text-brand-navy lg:hidden"
+          >
+            <div className="relative h-4 w-5">
+              <span
+                className={`absolute left-0 top-0 h-0.5 w-5 rounded bg-current transition-all duration-300 ${
+                  open ? 'top-1.5 rotate-45' : ''
+                }`}
+              />
+              <span
+                className={`absolute left-0 top-1.5 h-0.5 w-5 rounded bg-current transition-all duration-300 ${
+                  open ? 'opacity-0' : ''
+                }`}
+              />
+              <span
+                className={`absolute left-0 top-3 h-0.5 w-5 rounded bg-current transition-all duration-300 ${
+                  open ? 'top-1.5 -rotate-45' : ''
+                }`}
+              />
+            </div>
+          </button>
+        </div>
+      </nav>
 
       {/* Mobile menu */}
       <AnimatePresence>
@@ -131,7 +133,7 @@ export default function Navbar() {
               transition={{ duration: 0.25 }}
               className="container-xl relative pt-24"
             >
-              <div className="glass rounded-3xl p-4 shadow-float">
+              <div className="rounded-3xl border border-brand-navy/10 bg-white p-4 shadow-float">
                 <ul className="flex flex-col">
                   {NAV_SECTIONS.map((s) => (
                     <li key={s.id}>
@@ -164,6 +166,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </motion.header>
   );
 }
