@@ -56,7 +56,7 @@ export default function Features() {
             One assistant, your <span className="text-gradient-ai">entire tech stack</span>
           </h2>
           <p className="mt-4 text-lg text-brand-ink/60">
-            MeshMesh operates across the Salesforce products you already run.
+            MeshMesh operates across Salesforce and well beyond.
           </p>
         </Reveal>
       </div>
