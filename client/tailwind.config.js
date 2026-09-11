@@ -13,6 +13,10 @@ export default {
           cyan: '#16D6FA',
           teal: '#2DD4BF',
         },
+        // v2 editorial palette
+        ink: '#0B0B0C',
+        paper: '#F4F1EA',
+        acid: '#C7F94E',
       },
       fontFamily: {
         sans: [
@@ -24,6 +28,9 @@ export default {
           '"Segoe UI"',
           'sans-serif',
         ],
+        grotesk: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+        display: ['"Instrument Serif"', 'Georgia', 'Cambria', 'serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       boxShadow: {
         glow: '0 0 40px -8px rgba(22, 214, 250, 0.55)',
