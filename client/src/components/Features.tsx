@@ -41,7 +41,7 @@ const CAPABILITIES: Capability[] = [
   {
     icon: '🔌',
     title: 'Integrations, everywhere',
-    body: 'Full MCP & A2A support connects MeshMesh to Slack, Braze, Google Drive, and the tools your team already uses.',
+    body: 'Full MCP & A2A support connects Salesforce to Shopify, Slack, Braze, Google Drive, Microsoft, and the tools your team already uses.',
     accent: 'from-brand-navy/10 to-brand-blue/10',
   },
 ];
