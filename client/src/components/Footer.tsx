@@ -21,8 +21,8 @@ export default function Footer() {
               <img src={logo} alt="MeshMesh from Salesforce" className="h-8 w-auto" />
             </span>
             <p className="mt-4 max-w-xs text-sm text-white/60">
-              The agentic AI assistant for the Salesforce enterprise. Plan and build by simply
-              asking.
+              The agentic AI assistant for the Salesforce enterprise and beyond. Plan and build by
+              simply asking.
             </p>
           </div>
 
