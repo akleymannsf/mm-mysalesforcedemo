@@ -78,7 +78,7 @@ export default function Hero() {
             className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row"
           >
             <a href="#demo" className="btn-primary w-full sm:w-auto">
-              Try Easy Mode <span aria-hidden>→</span>
+              See It In Action <span aria-hidden>→</span>
             </a>
             <a href="#roi" className="btn-ghost w-full sm:w-auto">
               See the ROI
