@@ -79,15 +79,15 @@ function Nav() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        scrolled ? 'border-b border-paper/10 bg-ink/85 backdrop-blur-md' : 'border-b border-transparent'
+      className={`fixed inset-x-0 top-0 z-50 bg-white text-ink transition-shadow duration-300 ${
+        scrolled
+          ? 'shadow-[0_1px_0_rgba(0,0,0,0.06),0_10px_30px_-18px_rgba(0,0,0,0.28)]'
+          : 'border-b border-ink/10'
       }`}
     >
       <nav className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-5 sm:px-10">
         <a href="#overview" className="flex items-center gap-3" aria-label="MeshMesh home">
-          <span className="inline-flex items-center rounded-md bg-white px-2.5 py-1.5 shadow-sm">
-            <img src={logo} alt="MeshMesh from Salesforce" className="h-6 w-auto" />
-          </span>
+          <img src={logo} alt="MeshMesh from Salesforce" className="h-6 w-auto sm:h-7" />
         </a>
 
         <ul className="hidden items-center gap-6 md:flex">
@@ -96,10 +96,10 @@ function Nav() {
               <a
                 href={`#${s.id}`}
                 className={`font-mono text-[11px] uppercase tracking-[0.2em] transition-colors ${
-                  active === s.id ? 'text-acid' : 'text-paper/50 hover:text-paper'
+                  active === s.id ? 'text-acid' : 'text-ink/45 hover:text-ink'
                 }`}
               >
-                <span className="text-paper/25">{String(i + 1).padStart(2, '0')} </span>
+                <span className="text-ink/25">{String(i + 1).padStart(2, '0')} </span>
                 {s.label}
               </a>
             </li>
@@ -118,7 +118,7 @@ function Nav() {
             onClick={() => setOpen((v) => !v)}
             aria-label={open ? 'Close menu' : 'Open menu'}
             aria-expanded={open}
-            className="font-mono text-[11px] uppercase tracking-[0.2em] text-paper md:hidden"
+            className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink md:hidden"
           >
             {open ? '[ close ]' : '[ menu ]'}
           </button>
@@ -131,18 +131,18 @@ function Nav() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 top-16 z-40 bg-ink md:hidden"
+            className="fixed inset-0 top-16 z-40 bg-white md:hidden"
           >
-            <ul className="flex flex-col divide-y divide-paper/10 border-t border-paper/10">
+            <ul className="flex flex-col divide-y divide-ink/10 border-t border-ink/10">
               {NAV_SECTIONS.map((s, i) => (
                 <li key={s.id}>
                   <a
                     href={`#${s.id}`}
                     onClick={() => setOpen(false)}
-                    className="flex items-baseline justify-between px-5 py-5 font-display text-3xl text-paper"
+                    className="flex items-baseline justify-between px-5 py-5 font-display text-3xl text-ink"
                   >
                     {s.label}
-                    <span className="font-mono text-xs text-paper/30">
+                    <span className="font-mono text-xs text-ink/30">
                       {String(i + 1).padStart(2, '0')}
                     </span>
                   </a>
@@ -695,16 +695,12 @@ function Footer() {
   }, []);
 
   return (
-    <footer className="relative border-t border-paper/10">
-      <div className="bg-paper py-12">
-        <div className="mx-auto max-w-[1400px] px-5 sm:px-10">
-          <img src={logo} alt="MeshMesh from Salesforce" className="h-9 w-auto sm:h-10" />
-        </div>
-      </div>
+    <footer className="relative border-t border-ink/10 bg-white text-ink">
+      <div className="mx-auto max-w-[1400px] px-5 py-14 sm:px-10">
+        <img src={logo} alt="MeshMesh from Salesforce" className="h-9 w-auto sm:h-10" />
 
-      <div className="mx-auto max-w-[1400px] px-5 py-12 sm:px-10">
-        <div className="grid gap-8 border-b border-paper/10 pb-10 md:grid-cols-12">
-          <p className="max-w-sm font-display text-2xl text-paper/70 md:col-span-6">
+        <div className="mt-10 grid gap-8 border-b border-ink/10 pb-10 md:grid-cols-12">
+          <p className="max-w-sm font-display text-2xl text-ink/70 md:col-span-6">
             The agentic AI assistant for the Salesforce enterprise and beyond. Plan and build by
             simply asking.
           </p>
@@ -713,7 +709,7 @@ function Footer() {
               <a
                 key={s.id}
                 href={`#${s.id}`}
-                className="font-mono text-[11px] uppercase tracking-[0.2em] text-paper/50 transition-colors hover:text-acid"
+                className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink/50 transition-colors hover:text-acid"
               >
                 {s.label}
               </a>
@@ -721,10 +717,10 @@ function Footer() {
           </nav>
         </div>
         <div className="flex flex-col justify-between gap-3 pt-6 sm:flex-row">
-          <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-paper/40">
+          <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-ink/40">
             © {new Date().getFullYear()} MeshMesh — a Salesforce Product
           </p>
-          <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-paper/40">
+          <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-ink/40">
             SOC 2 · ISO 42001 · Zero Training · Zero Retention
           </p>
         </div>
