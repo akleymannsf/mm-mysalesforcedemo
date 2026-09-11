@@ -37,10 +37,7 @@ export default function Demo() {
               <span className="h-3 w-3 rounded-full bg-[#FF5F57]" />
               <span className="h-3 w-3 rounded-full bg-[#FEBC2E]" />
               <span className="h-3 w-3 rounded-full bg-[#28C840]" />
-              <div className="mx-auto flex max-w-md flex-1 items-center justify-center gap-2 rounded-md bg-white/10 px-3 py-1 text-xs font-medium text-white/60">
-                <span className="text-brand-teal">🔒</span> Flow Audit Report
-              </div>
-              <span className="hidden rounded-full bg-brand-cyan/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-brand-cyan sm:inline">
+              <span className="ml-auto hidden rounded-full bg-brand-cyan/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-brand-cyan sm:inline">
                 Full Demo
               </span>
             </div>
