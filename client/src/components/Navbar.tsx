@@ -48,9 +48,6 @@ export default function Navbar() {
                 className="h-6 w-auto sm:h-7"
               />
             </span>
-            <span className="hidden rounded-full border border-brand-blue/20 bg-brand-blue/5 px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.14em] text-brand-blue sm:inline">
-              Product
-            </span>
           </a>
 
           {/* Desktop nav */}
