@@ -16,7 +16,8 @@ export default {
         // v2 editorial palette
         ink: '#0B0B0C',
         paper: '#F4F1EA',
-        acid: '#C7F94E',
+        // signature accent (kept under the `acid` key to avoid churn) — now electric blue
+        acid: '#1B96FF',
       },
       fontFamily: {
         sans: [

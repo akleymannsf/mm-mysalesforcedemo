@@ -85,7 +85,9 @@ function Nav() {
     >
       <nav className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-5 sm:px-10">
         <a href="#overview" className="flex items-center gap-3" aria-label="MeshMesh home">
-          <img src={logo} alt="MeshMesh from Salesforce" className="h-6 w-auto" />
+          <span className="inline-flex items-center rounded-md bg-white px-2.5 py-1.5 shadow-sm">
+            <img src={logo} alt="MeshMesh from Salesforce" className="h-6 w-auto" />
+          </span>
         </a>
 
         <ul className="hidden items-center gap-6 md:flex">
