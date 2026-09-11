@@ -24,9 +24,6 @@ export default function Footer() {
               The agentic AI assistant for the Salesforce enterprise. Plan and build by simply
               asking.
             </p>
-            <span className="mt-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-semibold text-brand-cyan">
-              ✅ Available on AppExchange
-            </span>
           </div>
 
           <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
