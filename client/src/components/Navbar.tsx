@@ -37,6 +37,35 @@ export default function Navbar() {
           : 'border-b border-brand-navy/5'
       }`}
     >
+      {/* Announcement bar — collapses away on scroll */}
+      <AnimatePresence initial={false}>
+        {!scrolled && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 40, opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
+            className="overflow-hidden bg-brand-navy"
+          >
+            <a
+              href="#demo"
+              className="group container-xl flex h-10 items-center justify-center gap-2 text-center text-[13px] font-semibold text-white sm:text-sm"
+            >
+              <span className="text-brand-cyan" aria-hidden>
+                ✦
+              </span>
+              Customer pilot nominations open
+              <span className="inline-flex items-center gap-1 text-brand-cyan underline decoration-brand-cyan/50 underline-offset-2 transition-all group-hover:decoration-brand-cyan">
+                Nominate your team
+                <span aria-hidden className="transition-transform group-hover:translate-x-0.5">
+                  →
+                </span>
+              </span>
+            </a>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <nav className="container-xl flex h-16 items-center justify-between sm:h-[70px]">
         {/* Brand */}
         <a href="#overview" className="flex items-center" aria-label="MeshMesh home">
