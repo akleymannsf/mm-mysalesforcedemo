@@ -66,12 +66,6 @@ export default function Security() {
               >
                 Get Started <span aria-hidden>→</span>
               </a>
-              <a
-                href="#overview"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/30 px-7 py-3.5 text-sm font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-white/10 sm:w-auto"
-              >
-                Book a demo
-              </a>
             </div>
           </div>
         </Reveal>
