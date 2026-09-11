@@ -28,7 +28,7 @@ const CAPABILITIES: Capability[] = [
   },
   {
     icon: '🧠',
-    title: 'Your org, understood',
+    title: 'Your business, understood',
     body: 'Progressive context assembly maps your metadata, flows, and data model — with zero training on your sensitive data.',
     accent: 'from-brand-teal/10 to-brand-blue/10',
   },
