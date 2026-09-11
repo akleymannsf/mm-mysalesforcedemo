@@ -172,6 +172,8 @@ function Hero() {
     <section id="overview" className="relative overflow-hidden pt-28 sm:pt-36">
       {/* backdrop */}
       <div className="pointer-events-none absolute inset-0 -z-10">
+        {/* smooth transition from the white header into the dark canvas */}
+        <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white to-transparent" />
         <div
           className="absolute inset-0 opacity-[0.06]"
           style={{
