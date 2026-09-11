@@ -3,8 +3,8 @@ import Reveal from './Reveal';
 import { YOUTUBE_EMBED, YOUTUBE_TITLE } from '../lib/sections';
 
 const HIGHLIGHTS = [
-  'Watch every step live in a real browser, or step away with confidence',
   'Approve each step — nothing runs without your consent',
+  'Watch every step live in a real browser, or step away with confidence',
   'Builds real-world, production-grade solutions, not just ideas',
 ];
 
