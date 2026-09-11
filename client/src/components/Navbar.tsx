@@ -56,7 +56,7 @@ export default function Navbar() {
               </span>
               Customer pilot nominations open
               <span className="inline-flex items-center gap-1 text-brand-cyan underline decoration-brand-cyan/50 underline-offset-2 transition-all group-hover:decoration-brand-cyan">
-                Nominate your team
+                Nominate a customer hero
                 <span aria-hidden className="transition-transform group-hover:translate-x-0.5">
                   →
                 </span>
