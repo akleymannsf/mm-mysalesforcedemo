@@ -12,7 +12,7 @@
     "start": "node dist/index.js",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate deploy",
-    "heroku-postbuild": "npm --prefix ../client install && npm --prefix ../client run build && rimraf public && copyfiles -u 3 \"../client/dist/**/*\" public && npm run build"
+    "heroku-postbuild": "npm --prefix ../client install --include=dev && npm --prefix ../client run build && rimraf public && copyfiles -u 3 \"../client/dist/**/*\" public && npm run build"
   },
   "dependencies": {
     "@prisma/client": "^5.22.0",

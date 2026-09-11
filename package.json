@@ -13,7 +13,7 @@
     "build": "npm --prefix client run build && npm --prefix server run build",
     "start": "npm --prefix server run start",
     "install:all": "npm install && npm --prefix client install && npm --prefix server install",
-    "heroku-postbuild": "npm --prefix server install && npm --prefix server run heroku-postbuild"
+    "heroku-postbuild": "npm --prefix server install --include=dev && npm --prefix server run heroku-postbuild"
   },
   "devDependencies": {
     "concurrently": "^9.1.0"

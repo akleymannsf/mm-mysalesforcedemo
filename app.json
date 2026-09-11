@@ -1,0 +1,33 @@
+{
+  "name": "mm-mysalesforcedemo",
+  "description": "React (Vite) + Express + Prisma app. Express serves the built client and the /api routes.",
+  "repository": "https://github.com/akleymannsf/mm-mysalesforcedemo",
+  "keywords": ["node", "express", "react", "vite", "prisma", "postgresql"],
+  "stack": "heroku-24",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "NODE_ENV": {
+      "description": "Node environment.",
+      "value": "production"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql:essential-0",
+      "as": "DATABASE"
+    }
+  ],
+  "scripts": {
+    "postdeploy": "npm --prefix server run prisma:migrate"
+  }
+}
