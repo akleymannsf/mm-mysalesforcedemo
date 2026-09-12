@@ -86,8 +86,12 @@ function Nav() {
       }`}
     >
       <nav className="mx-auto flex h-20 max-w-[1400px] items-center justify-between px-5 sm:h-24 sm:px-10">
-        <a href="#overview" className="flex items-center gap-3" aria-label="MeshMesh home">
-          <img src={logo} alt="MeshMesh from Salesforce" className="h-11 w-auto sm:h-14" />
+        <a href="#overview" className="flex shrink-0 items-center gap-3" aria-label="MeshMesh home">
+          <img
+            src={logo}
+            alt="MeshMesh from Salesforce"
+            className="h-11 w-auto max-w-none shrink-0 object-contain sm:h-14"
+          />
         </a>
 
         <ul className="hidden items-center gap-6 md:flex">
@@ -699,7 +703,11 @@ function Footer() {
   return (
     <footer className="relative border-t border-ink/10 bg-white text-ink">
       <div className="mx-auto max-w-[1400px] px-5 py-14 sm:px-10">
-        <img src={logo} alt="MeshMesh from Salesforce" className="h-9 w-auto sm:h-10" />
+        <img
+          src={logo}
+          alt="MeshMesh from Salesforce"
+          className="h-9 w-auto max-w-none shrink-0 object-contain sm:h-10"
+        />
 
         <div className="mt-10 grid gap-8 border-b border-ink/10 pb-10 md:grid-cols-12">
           <p className="max-w-sm font-display text-2xl text-ink md:col-span-6">
