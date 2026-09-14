@@ -4,76 +4,80 @@ export default {
   theme: {
     extend: {
       colors: {
-        brand: {
-          blue: '#0176D3',
-          'blue-dark': '#014486',
-          navy: '#032D60',
-          ink: '#181818',
-          mist: '#F3F5F7',
-          cyan: '#16D6FA',
-          teal: '#2DD4BF',
+        // MeshMesh × Salesforce brand kit (dark-first)
+        ink: '#0A0A0A',
+        surface: '#141414',
+        'surface-2': '#1C1C1C',
+        fg: '#FFFFFF',
+        muted: '#A1A1A1',
+        subtle: '#6B6B6B',
+        line: '#262626',
+        cloud: '#00B3FF',
+        coral: {
+          DEFAULT: '#FA6863',
+          hover: '#E5473F',
+          50: '#FFF1EF',
+          100: '#FFDED9',
+          200: '#FFBCB3',
+          300: '#FF988C',
+          400: '#FD7A70',
+          500: '#FA6863',
+          600: '#E5473F',
+          700: '#C93B34',
+          800: '#A32F2A',
+          900: '#7D2622',
+          950: '#4D1512',
+        },
+        mint: {
+          DEFAULT: '#3AD598',
+          50: '#E9FBF3',
+          100: '#C9F5E1',
+          200: '#96ECC6',
+          300: '#5EDDA8',
+          400: '#3AD598',
+          500: '#1FB87E',
+          600: '#159566',
+          700: '#137553',
+          800: '#125C43',
+          900: '#0F4A38',
+          950: '#062A20',
+        },
+        amber: {
+          DEFAULT: '#D38C49',
+          400: '#D38C49',
+          500: '#B6753B',
+          600: '#985F30',
         },
       },
       fontFamily: {
         sans: [
-          '"Salesforce Sans"',
-          'Inter',
-          'system-ui',
+          'Geist',
+          '"Geist Sans"',
           '-apple-system',
           'BlinkMacSystemFont',
           '"Segoe UI"',
           'sans-serif',
         ],
+        mono: ['"Geist Mono"', '"SF Mono"', 'Monaco', 'monospace'],
       },
-      boxShadow: {
-        glow: '0 0 40px -8px rgba(22, 214, 250, 0.55)',
-        'glow-blue': '0 0 60px -10px rgba(1, 118, 211, 0.6)',
-        card: '0 10px 40px -12px rgba(3, 45, 96, 0.25)',
-        float: '0 30px 80px -20px rgba(3, 45, 96, 0.45)',
+      borderColor: {
+        DEFAULT: '#262626',
       },
-      backgroundImage: {
-        'grid-fade':
-          'linear-gradient(to right, rgba(3,45,96,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(3,45,96,0.06) 1px, transparent 1px)',
+      borderRadius: {
+        DEFAULT: '0.475rem',
+        card: '1rem',
+      },
+      maxWidth: {
+        wrap: '1080px',
       },
       keyframes: {
-        marquee: {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' },
-        },
-        'marquee-reverse': {
-          '0%': { transform: 'translateX(-50%)' },
-          '100%': { transform: 'translateX(0)' },
-        },
-        'gradient-x': {
-          '0%, 100%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-        },
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-12px)' },
-        },
-        'float-slow': {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-20px)' },
-        },
-        shimmer: {
-          '0%': { backgroundPosition: '-200% 0' },
-          '100%': { backgroundPosition: '200% 0' },
-        },
-        'pulse-ring': {
-          '0%': { transform: 'scale(0.9)', opacity: '0.7' },
-          '80%, 100%': { transform: 'scale(1.6)', opacity: '0' },
+        'mm-marquee': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
         },
       },
       animation: {
-        marquee: 'marquee 40s linear infinite',
-        'marquee-fast': 'marquee 25s linear infinite',
-        'marquee-reverse': 'marquee-reverse 45s linear infinite',
-        'gradient-x': 'gradient-x 6s ease infinite',
-        float: 'float 6s ease-in-out infinite',
-        'float-slow': 'float-slow 9s ease-in-out infinite',
-        shimmer: 'shimmer 2.5s linear infinite',
-        'pulse-ring': 'pulse-ring 2.5s cubic-bezier(0.2, 0.7, 0.4, 1) infinite',
+        'mm-marquee': 'mm-marquee 40s linear infinite',
       },
     },
   },

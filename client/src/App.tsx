@@ -1,7 +1,8 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Marquee from './components/Marquee';
 import Demo from './components/Demo';
-import Pillars from './components/Pillars';
+import Approach from './components/Approach';
 import Testimonials from './components/Testimonials';
 import ROI from './components/ROI';
 import Features from './components/Features';
@@ -10,12 +11,13 @@ import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white text-brand-ink">
+    <div className="min-h-screen bg-ink text-fg">
       <Navbar />
       <main>
         <Hero />
+        <Marquee />
         <Demo />
-        <Pillars />
+        <Approach />
         <Testimonials />
         <ROI />
         <Features />

@@ -1,90 +1,53 @@
-import { motion } from 'framer-motion';
-import Reveal from './Reveal';
+import SectionHead from './SectionHead';
 import { YOUTUBE_EMBED, YOUTUBE_TITLE } from '../lib/sections';
 
-const HIGHLIGHTS = [
-  'Approve each step — nothing runs without your consent',
-  'Watch every step live, or step away with confidence',
-  'Delivers real-world, production-grade solutions, not just ideas',
+const STEPS = [
+  'Approve each step — nothing runs without your consent.',
+  'Watch every step live, or step away with confidence.',
+  'Delivers real-world, production-grade solutions, not just ideas.',
 ];
 
 export default function Demo() {
   return (
-    <section id="demo" className="relative overflow-hidden bg-brand-navy py-24 text-white">
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-1/2 top-0 h-96 w-[46rem] -translate-x-1/2 rounded-full bg-brand-blue/30 blur-3xl" />
-        <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-brand-cyan/20 blur-3xl" />
-      </div>
+    <section id="demo" className="border-t border-line py-20 sm:py-24">
+      <div className="wrap">
+        <SectionHead
+          eyebrow="Fig.01 — BrowserMesh, live"
+          lede="MeshMesh is like a team of junior developers, acting on your plan, doing every click, testing its own work, and documenting every step. You’re always in the loop — collaboratively planning and validating the output before anything goes live."
+        >
+          Watch as the work gets done.
+        </SectionHead>
 
-      <div className="container-xl">
-        <Reveal className="mx-auto max-w-2xl text-center">
-          <span className="eyebrow border-white/20 bg-white/10 text-brand-cyan">See it in action</span>
-          <h2 className="mt-5 text-3xl font-black tracking-tight sm:text-5xl">
-            Watch as the work <span className="text-gradient-ai">gets done</span>
-          </h2>
-          <p className="mt-4 text-lg text-white/70">
-            MeshMesh is like a team of junior developers, acting on your plan, doing every click,
-            testing its own work, and documenting every step. You’re always in the loop —
-            collaboratively planning and validating the output before anything goes live.
-          </p>
-        </Reveal>
-
-        <Reveal delay={0.1} className="relative mx-auto mt-14 max-w-5xl">
-          <div className="absolute -inset-3 -z-10 rounded-[2rem] bg-gradient-to-r from-brand-blue/40 via-brand-cyan/30 to-brand-teal/40 blur-2xl" />
-          <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#0b1b33] shadow-float">
-            {/* Browser chrome */}
-            <div className="flex items-center gap-2 border-b border-white/10 bg-white/5 px-4 py-3">
-              <span className="h-3 w-3 rounded-full bg-[#FF5F57]" />
-              <span className="h-3 w-3 rounded-full bg-[#FEBC2E]" />
-              <span className="h-3 w-3 rounded-full bg-[#28C840]" />
-              <span className="ml-auto hidden rounded-full bg-brand-cyan/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-brand-cyan sm:inline">
-                Full Demo
-              </span>
-            </div>
-            <div className="aspect-video w-full bg-black">
-              <iframe
-                className="h-full w-full"
-                src={YOUTUBE_EMBED}
-                title={YOUTUBE_TITLE}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              />
-            </div>
+        <div className="card mt-10 overflow-hidden bg-[#0C0C0C]">
+          <iframe
+            className="block aspect-video w-full border-0 bg-ink"
+            src={YOUTUBE_EMBED}
+            title={YOUTUBE_TITLE}
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+          <div className="flex items-center justify-between border-t border-line px-5 py-3.5">
+            <span className="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-muted">
+              Fig.01 — BrowserMesh Flow Audit Report
+            </span>
+            <span className="font-mono text-[0.72rem] uppercase tracking-[0.1em] text-coral">
+              ▶ Full demo
+            </span>
           </div>
+        </div>
 
-          {/* Floating badges */}
-          <motion.div
-            className="absolute -left-3 -top-5 rounded-2xl bg-white px-4 py-2.5 text-brand-navy shadow-card sm:-left-6"
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 5.5, repeat: Infinity, ease: 'easeInOut' }}
-          >
-            <p className="text-lg font-black text-brand-blue">80–95%</p>
-            <p className="text-[11px] font-semibold text-brand-ink/60">Time Saved</p>
-          </motion.div>
-          <motion.div
-            className="absolute -bottom-5 -right-3 rounded-2xl bg-gradient-to-br from-brand-blue to-brand-navy px-4 py-2.5 shadow-glow sm:-right-6"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 6.5, repeat: Infinity, ease: 'easeInOut' }}
-          >
-            <p className="text-sm font-black text-brand-cyan">Full Human</p>
-            <p className="text-[11px] font-semibold text-white/70">Consent Control</p>
-          </motion.div>
-        </Reveal>
-
-        <Reveal delay={0.2} className="mx-auto mt-12 grid max-w-4xl gap-4 sm:grid-cols-3">
-          {HIGHLIGHTS.map((h) => (
-            <div
-              key={h}
-              className="glass-dark rounded-2xl p-5 text-sm font-medium text-white/80"
-            >
-              <span className="mb-2 flex h-8 w-8 items-center justify-center rounded-full bg-brand-cyan/20 text-brand-cyan">
-                ✓
+        <div className="mt-7 grid gap-5 sm:grid-cols-3">
+          {STEPS.map((s, i) => (
+            <div key={s} className="card p-6">
+              <span className="font-mono text-[0.8rem] tracking-[0.1em] text-coral">
+                {String(i + 1).padStart(2, '0')}
               </span>
-              {h}
+              <p className="mt-2.5 text-[0.96rem] text-muted">{s}</p>
             </div>
           ))}
-        </Reveal>
+        </div>
       </div>
     </section>
   );

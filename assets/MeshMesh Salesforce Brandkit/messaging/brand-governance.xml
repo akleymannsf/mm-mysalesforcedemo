@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  MeshMesh Brand Governance — machine-readable schema.
+  Drop this entire block into an LLM system prompt to enforce on-brand copy.
+  It encodes the four messaging docs (positioning, messaging house, voice & tone,
+  lexicon) as deterministic, checkable rules. Human-readable sources:
+  messaging/01-positioning.md ... messaging/04-lexicon.md.
+  Every figure traces to: "Meet MeshMesh v.07242026" and
+  "MeshMesh Product & Technology Overview" (Jul 2026).
+-->
+<brand_governance brand="MeshMesh" version="1.0" updated="2026-09-13">
+
+  <positioning>
+    <statement>For Salesforce Solution Engineers, Technical Architects, Admins, Trailblazers, Partners, FDEs, Professional Services, Customer Success, and Account teams, MeshMesh is the Headless 360 orchestration platform that plans and executes end-to-end Salesforce work from plain-language intent, because it pairs deep validated knowledge of 40+ Salesforce products with a three-context intelligence model that compounds with every run and stops only when outcomes are verified.</statement>
+    <category>Headless 360 orchestration platform</category>
+    <primary_benefit>Collapses Salesforce setup and operations from months to minutes (~90% of time returned to the user).</primary_benefit>
+    <differentiator>Salesforce-first knowledge + autonomous end-to-end execution (API and browser) + a learning flywheel that compounds.</differentiator>
+    <audience tier="primary">Solution Engineers, Technical Architects, Admins, Trailblazers, Partners, FDEs, Professional Services, Customer Success, Account Managers</audience>
+    <audience tier="expansion">ISVs, DET/DEX teams, internal tools &amp; acquisitions, Salesforce customers</audience>
+    <audience tier="exclude">GovTech / highly regulated organizations; software-development companies</audience>
+    <is_not>an IDE extension; a dev tool; a coding assistant; prompt-to-generate; an LLM wrapper; a replacement for Agentforce</is_not>
+  </positioning>
+
+  <strategic_context initiative="Maestro">
+    <vision>We make the complex, Salesforce simple.</vision>
+    <definition>Maestro is Salesforce's new AI-native, agent-driven initiative to make using and implementing any Salesforce product simple.</definition>
+    <meshmesh_role>MeshMesh is part of Maestro — the engine proving it works, today.</meshmesh_role>
+    <value_motion>Diagnose → Fix → Innovate</value_motion>
+    <approved_line>Maestro is the vision. MeshMesh is the engine proving it works, today.</approved_line>
+    <rule>Lead with Maestro for strategic/executive pieces; lead with MeshMesh when it's about the product doing the work.</rule>
+    <rule>Never conflate the Maestro value motion (Diagnose → Fix → Innovate) with the MeshMesh task flow (Define → Approve → Execute).</rule>
+  </strategic_context>
+
+  <core_message>
+    <roof>MeshMesh collapses Salesforce setup from months to minutes. You define the outcome, approve the plan, and MeshMesh executes it end-to-end — and gets better with every run.</roof>
+    <pillar id="1" name="Salesforce-first, not code-first" proof="40+ products; 387+ features; multi-org deploy + UAT; browser-beyond-the-API"/>
+    <pillar id="2" name="Autonomous end-to-end execution" proof="8-stage pipeline (plan,build,configure,deploy,test,document,iterate,outcomes); 11.4x fewer steps"/>
+    <pillar id="3" name="Built for business users, plain language" proof="real-time business-language translation; interface-agnostic access"/>
+    <pillar id="4" name="Compounding intelligence" proof="Three-Context Model; intelligence flywheel; tenant-isolated learning"/>
+  </core_message>
+
+  <voice_attributes register="Stripe/Linear/Vercel product-update">
+    <!-- type="binary" = hard gate, enforce pass/fail. type="principle" = strong default that guides writing but may be broken when clarity genuinely demands. -->
+
+    <rule id="V1" type="binary">Address the reader in second person ("you", "your").</rule>
+    <rule id="V2" type="binary">Lead with an outcome or a number, never a descriptive adjective.</rule>
+    <rule id="V3" type="binary">Write metrics as numerals with a unit or multiplier (90%, 11x, 40+, 45 min).</rule>
+    <rule id="V4" type="binary">Use active voice in all headlines and CTAs.</rule>
+    <rule id="V5" type="binary">One value claim per sentence; no stacked superlatives.</rule>
+    <rule id="V6" type="principle">Keep sentences short — aim for about 10 words; headlines shorter. One idea per sentence. Less is more. May be broken when clarity genuinely demands.</rule>
+    <rule id="V7" type="binary">Use zero words from the forbidden list.</rule>
+    <rule id="V8" type="binary">Use concrete verbs (plan, build, configure, deploy, test, document); not "handles/empowers/unlocks".</rule>
+    <rule id="V9" type="binary">Pair any "autonomous" claim with the human approval gate.</rule>
+    <rule id="V10" type="binary">In long-form, every statistic carries its source or qualifier.</rule>
+    <rule id="V11" type="principle">Keep it sparse: cut every word the sentence still reads without.</rule>
+    <rule id="V12" type="principle">Plain English at a high-school reading level; no clauses within clauses.</rule>
+    <rule id="V13" type="binary">No corporate jargon or flowery/ornamental words.</rule>
+    <rule id="V14" type="binary">Sound human, not generated: use zero phrases from the llm_tells list.</rule>
+    <rule id="V15" type="binary">CTAs begin with a verb ("See the demo", "Start a plan"); never "Learn more" alone.</rule>
+  </voice_attributes>
+
+  <tone context_dependent="true">
+    <mode context="marketing">Confident, punchy; outcome-led headline with a number in the first line.</mode>
+    <mode context="onboarding">Encouraging, lightly celebratory; warm second-person guidance; at most one exclamation point; no hype words.</mode>
+    <mode context="execution_status">Neutral and factual; present-progressive title in progress ("Retrieving sales records…"), past-tense summary on completion ("19 sales records retrieved"); no technical jargon shown to business users.</mode>
+    <mode context="support_error">Empathetic and solution-first; acknowledge, then give the next step; never blame the user; never expose stack traces.</mode>
+    <mode context="security_legal">Sober, precise, evidence-backed; cite frameworks; qualify every claim; no absolutes.</mode>
+    <mode context="sales_exec">ROI-forward; lead with 11x ROI / hours saved; keep every number's qualifier.</mode>
+  </tone>
+
+  <translation_principle>
+    <rule>In business-user surfaces, describe the business result, never the technical action.</rule>
+    <forbidden_surface_content>API names, HTTP verbs, endpoints, object API names, JSON payloads, stack traces</forbidden_surface_content>
+    <example technical="POST /interaction/v1/interactions (47-field JSON)" business="Created your campaign with these segments and this schedule."/>
+    <example technical="Deploy metadata bundle to target org" business="Deployed your Sales Agent to the connected org."/>
+  </translation_principle>
+
+  <lexicon>
+    <!-- Proprietary / brand vocabulary -->
+    <term correct="MeshMesh" incorrect="Mesh Mesh, Meshmesh, meshmesh, MeshMesh AI"/>
+    <term correct="MeshMesh Studio" incorrect="the Studio app, MeshMesh Dashboard"/>
+    <term correct="MeshMesh from Salesforce" incorrect="MeshMesh by Salesforce"/>
+    <term correct="Slackbot" incorrect="Slack bot, Slack Bot, MeshMesh for Slack"/>
+    <term correct="Salesforce" incorrect="SFDC, salesforce.com, SF"/>
+    <term correct="Headless 360 orchestration platform" incorrect="headless CRM, 360 platform, orchestration tool"/>
+    <term correct="amorphous agents" incorrect="pre-built agents, static agents, bots"/>
+    <term correct="Three-Context Model" incorrect="3-context system, context engine"/>
+    <term correct="progressive context assembly" incorrect="context stuffing, prompt loading"/>
+    <term correct="knowledge packages" incorrect="knowledge base, vector database, doc dump"/>
+    <term correct="intelligence flywheel" incorrect="the algorithm, our AI magic"/>
+    <term correct="co-create a plan" incorrect="generate a plan, auto-plan, a vibe"/>
+    <term correct="human approval gate" incorrect="fully hands-off, set-and-forget"/>
+    <term correct="verified outcomes" incorrect="results, deliverables"/>
+    <term correct="secure, isolated environment (for MeshMesh runtime)" incorrect="our sandbox"/>
+    <term correct="use" incorrect="leverage, utilize"/>
+    <term correct="accelerate" incorrect="supercharge, turbocharge"/>
+    <term correct="validated, enterprise-grade" incorrect="robust"/>
+    <note>"Salesforce sandbox" and "sandbox syncing" ARE correct — they name a Salesforce org type / capability. Only MeshMesh's own runtime must not be called a "sandbox".</note>
+  </lexicon>
+
+  <forbidden_list severity="hard">
+    <hype>game-changing, game-changer, revolutionary, supercharge, seamlessly, seamless, leverage, utilize, robust, paradigm, synergy, cutting-edge, bleeding-edge, disruptive, best-in-class, world-class, next-gen, next-generation, turnkey, frictionless, effortless, magic, magical, unparalleled, state-of-the-art, one-stop shop</hype>
+    <overclaim>100% secure, unhackable, fully autonomous (unqualified), zero risk, guaranteed, always/never as reliability claims, set-and-forget</overclaim>
+    <llm_tells>delve, delve into, dive in, let's dive in, unlock, unlock the power of, elevate, elevate your, empower, empowering, harness, harness the power, navigate the complexities, in today's fast-paced world, in the ever-evolving landscape, it's important to note, it's worth noting, when it comes to, that's where X comes in, look no further, rest assured, whether you're X or Y, not only... but also, at the end of the day, the world of, the realm of, tapestry, testament to, boasts, designed to (as filler), in conclusion, first and foremost, a myriad of, plethora</llm_tells>
+    <note>"Game-Changer" is permitted ONLY as the internal pilot time-savings tier label in validation tables, never as a marketing adjective.</note>
+  </forbidden_list>
+
+  <competitor_rules>
+    <rule>Name competitors only for factual contrast: "Cursor, Claude Code, and Copilot know code, not Salesforce."</rule>
+    <rule>Never disparage a named competitor beyond the supported contrast.</rule>
+    <rule>Agentforce is a partner concept, not a rival: "MeshMesh doesn't replace Agentforce — it builds Agentforce… and beyond." Never position against Agentforce.</rule>
+    <approved_comparison_set>Cursor, Claude Code, Copilot, Agentforce Vibes, Traditional SI</approved_comparison_set>
+  </competitor_rules>
+
+  <formatting_rules>
+    <numbers>Use numerals for all metrics (40+, 387+, 90%, 3,500+, 100,000+, 45 min).</numbers>
+    <multipliers>Lowercase x, no space: 11x, 11.4x, 10–13x.</multipliers>
+    <ranges>En dash, no spaces: 9–12 months, 120–160 hours, $18–24K.</ranges>
+    <distinct_claims>Keep separate: 11x ROI and 11.4x fewer steps (Jul 2026). Never merge or swap.</distinct_claims>
+    <signature_phrase>"months to minutes" (lowercase, no hyphens)</signature_phrase>
+    <capitalization>Sentence case for headings and UI labels. Capitalize proper nouns and MeshMesh terms (Headless 360, Three-Context Model). Do not capitalize "the plan", "the agent", "an outcome".</capitalization>
+    <punctuation>Oxford comma always. Em dash (—) for asides. En dash (–) for ranges. Avoid exclamation points (onboarding may use one). No semicolons in headlines.</punctuation>
+    <product_names>Spell out a Salesforce product on first use; acronym (MCE, MCA, FSC) after. Never invent a product name.</product_names>
+  </formatting_rules>
+
+  <proof_points>
+    <stat metric="products covered" value="40+"/>
+    <stat metric="features covered" value="387+"/>
+    <stat metric="daily builders" value="3,500+"/>
+    <stat metric="tasks completed" value="6,000+"/>
+    <stat metric="hours saved (est.)" value="100,000+"/>
+    <stat metric="ROI" value="11x"/>
+    <stat metric="reduction in steps" value="11.4x" qualifier="average across standard tasks, July 2026"/>
+    <stat metric="setup time returned" value="90%"/>
+    <stat metric="Headless Martech 360" value="120–160 hrs manual (~$18–24K) delivered in 8–12 hrs guidance; 10–13x compression"/>
+    <stat metric="problem: projects missing objectives" value="70%" qualifier="IBM State of Salesforce 2025/26"/>
+    <stat metric="problem: implementation timeline" value="9–12 months"/>
+    <stat metric="problem: implementation vs licensing spend" value="$6:$1"/>
+  </proof_points>
+
+  <hard_constraints>
+    <constraint>Never imply MeshMesh changes production without explicit human approval; planning and execution are separated by an approval gate.</constraint>
+    <constraint>Never imply cross-tenant data sharing; only business-stripped learnings return to the shared knowledge base.</constraint>
+    <constraint>Never use a proof-point number without its qualifier when the format allows one.</constraint>
+    <constraint>Never target excluded segments (GovTech/regulated, software-dev companies) in copy.</constraint>
+    <constraint>Keep internal per-use-case dollar/hour figures out of public-facing copy unless cleared.</constraint>
+  </hard_constraints>
+
+</brand_governance>

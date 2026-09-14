@@ -4,7 +4,6 @@ export interface NavSection {
 }
 
 export const NAV_SECTIONS: NavSection[] = [
-  { id: 'overview', label: 'Overview' },
   { id: 'demo', label: 'Demo' },
   { id: 'approach', label: 'Approach' },
   { id: 'testimonials', label: 'Testimonials' },
@@ -13,10 +12,7 @@ export const NAV_SECTIONS: NavSection[] = [
   { id: 'security', label: 'Security' },
 ];
 
-export const VIDEO_SRC =
-  'https://meshmesh.io/videos/BrowserMesh%20Flow%20Audit%20Report.mp4';
-
 // Full walkthrough hosted on YouTube.
-export const YOUTUBE_EMBED = 'https://www.youtube.com/embed/pZUww11bRt8';
+export const YOUTUBE_EMBED = 'https://www.youtube.com/embed/pZUww11bRt8?rel=0';
 export const YOUTUBE_TITLE =
-  'Automating Salesforce with MeshMesh Studio: From Insights to Execution in Minutes';
+  'Automating Salesforce with MeshMesh Studio — BrowserMesh Flow Audit Report';

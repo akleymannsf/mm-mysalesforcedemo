@@ -1,0 +1,273 @@
+{
+  "$schema": "https://meshmesh.io/schemas/brandkit-v1.json",
+  "brand": {
+    "name": "MeshMesh",
+    "lockup": "MeshMesh from Salesforce",
+    "product": "MeshMesh Studio",
+    "tagline": "Build production-grade Salesforce work with AI agents.",
+    "voice": "Clean, scannable, confident-but-not-hyped. Product-update tone (Stripe/Linear/Vercel). Lead with outcomes and numbers. Avoid: game-changing, revolutionary, supercharge, seamlessly, leverage, utilize.",
+    "url": "https://www.meshmesh.io",
+    "sources": [
+      "MeshMesh Studio app design system (packages/frontend/styles/globals.css, apps/desktop)",
+      "MeshMesh Salesforce Pilot Impact Report (Feb 8 – Mar 29, 2026)"
+    ]
+  },
+  "colors": {
+    "description": "Master palette. MeshMesh is dark-first for flagship/editorial output (reports, decks); light surfaces are provided for email and web where a light canvas is expected. Coral is the brand signature (carried over exactly from the app primary); mint signals positive outcomes/metrics; amber/copper is the warm editorial accent from the report artwork.",
+    "primary": "#FA6863",
+    "primaryHover": "#E5473F",
+    "primaryDeep": "#C93B34",
+    "secondary": "#0A0A0A",
+    "accent": "#3AD598",
+    "accentDeep": "#1FB87E",
+    "amber": "#D38C49",
+    "amberDeep": "#B6753B",
+    "salesforceCloud": "#00B3FF",
+    "salesforceNavy": "#001E5B",
+    "background": "#0A0A0A",
+    "backgroundLight": "#FFFFFF",
+    "surface": "#141414",
+    "surfaceElevated": "#1C1C1C",
+    "surfaceLight": "#FAFAFA",
+    "foreground": "#FFFFFF",
+    "foregroundLight": "#0A0A0A",
+    "muted": "#A1A1A1",
+    "mutedLight": "#737373",
+    "subtle": "#6B6B6B",
+    "border": "#262626",
+    "borderLight": "#E5E5E5",
+    "destructive": "#E7000B",
+    "scales": {
+      "coral": {
+        "50": "#FFF1EF", "100": "#FFDED9", "200": "#FFBCB3", "300": "#FF988C",
+        "400": "#FD7A70", "500": "#FA6863", "600": "#E5473F", "700": "#C93B34",
+        "800": "#A32F2A", "900": "#7D2622", "950": "#4D1512"
+      },
+      "mint": {
+        "50": "#E9FBF3", "100": "#C9F5E1", "200": "#96ECC6", "300": "#5EDDA8",
+        "400": "#3AD598", "500": "#1FB87E", "600": "#159566", "700": "#137553",
+        "800": "#125C43", "900": "#0F4A38", "950": "#062A20"
+      },
+      "amber": {
+        "50": "#FBF3E9", "100": "#F5E2C8", "200": "#EAC393", "300": "#DDA262",
+        "400": "#D38C49", "500": "#B6753B", "600": "#985F30", "700": "#7A4C28",
+        "800": "#5F3C22", "900": "#4A301D", "950": "#2A1A10"
+      },
+      "neutral": {
+        "0": "#000000", "50": "#0A0A0A", "100": "#141414", "200": "#1C1C1C",
+        "300": "#262626", "400": "#3D3D3D", "500": "#6B6B6B", "600": "#8A8A8A",
+        "700": "#A1A1A1", "800": "#D4D4D4", "900": "#F5F5F5", "1000": "#FFFFFF"
+      }
+    },
+    "chart": ["#FA6863", "#3AD598", "#D38C49", "#7C9AF0", "#B57BD6", "#5FC8D6"],
+    "dataViz": {
+      "barGradient": ["#FA6863", "#D38C49"],
+      "positive": "#3AD598",
+      "track": "#1C1C1C",
+      "grid": "#262626"
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "sans": "'Geist Sans', 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif",
+      "mono": "'Geist Mono', 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace"
+    },
+    "webfont": {
+      "provider": "Google Fonts",
+      "href": "https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap",
+      "note": "The MeshMesh app loads Geist via Adobe Typekit (use.typekit.net/slz7jmg.css). Geist is also on Google Fonts; either works. System stack is the fallback."
+    },
+    "desktop": {
+      "note": "For desktop artifacts (decks, print) install the font as 'Geist' / 'Geist Mono' — NOT the Typekit name 'Geist Sans'. Static OFL TTFs are vendored in assets/fonts/ (Geist-Regular, Geist-Bold, GeistMono-Regular, GeistMono-Medium). The PPTX deck embeds these so it renders on-brand without a local install.",
+      "family": "Geist",
+      "familyMono": "Geist Mono",
+      "files": "assets/fonts/*.ttf"
+    },
+    "weights": { "light": 300, "regular": 400, "medium": 500, "semibold": 600, "bold": 700 },
+    "scale": {
+      "display": { "size": "3.5rem", "lineHeight": "1.05", "weight": 400, "letterSpacing": "-0.02em" },
+      "h1": { "size": "2.5rem", "lineHeight": "1.1", "weight": 400, "letterSpacing": "-0.02em" },
+      "h2": { "size": "1.75rem", "lineHeight": "1.15", "weight": 500, "letterSpacing": "-0.01em" },
+      "h3": { "size": "1.25rem", "lineHeight": "1.3", "weight": 600 },
+      "body": { "size": "1rem", "lineHeight": "1.6", "weight": 400 },
+      "small": { "size": "0.875rem", "lineHeight": "1.5", "weight": 400 },
+      "eyebrow": { "size": "0.75rem", "lineHeight": "1.4", "weight": 600, "letterSpacing": "0.18em", "textTransform": "uppercase" }
+    },
+    "conventions": "Headings are light/regular weight with tight tracking. Section eyebrows are small uppercase with wide (~0.18em) tracking in muted or coral. Numerals/metrics may use the primary (coral) or positive (mint) accent."
+  },
+  "radius": {
+    "base": "0.475rem",
+    "sm": "0.35rem",
+    "md": "0.5rem",
+    "lg": "0.75rem",
+    "card": "1rem",
+    "pill": "9999px"
+  },
+  "shadows": {
+    "philosophy": "Minimal/flat. Prefer 1px borders over shadows on dark surfaces.",
+    "sm": "0 1px 2px rgba(0,0,0,0.4)",
+    "md": "0 4px 16px rgba(0,0,0,0.5)",
+    "lg": "0 12px 40px rgba(0,0,0,0.6)"
+  },
+  "spacing": { "unit": "0.25rem", "section": "5rem", "cardPadding": "1.75rem" },
+  "logo": {
+    "primaryLockup": {
+      "description": "Official co-branded horizontal lockup: mesh mark + 'MeshMesh' wordmark + 'from [cloud] Salesforce' endorsement. Use this wherever a horizontal logo fits (nav, email header, hero, footer). viewBox 0 0 802 230.",
+      "onDark": "assets/logos/meshmesh-salesforce-wordmark-wht.svg",
+      "onLight": "assets/logos/meshmesh-salesforce-wordmark-blk.svg",
+      "email": {
+        "note": "Email clients (Gmail, Outlook) do not render SVG. Use the PNG for any email and host it at a public https URL.",
+        "onDark": "assets/logos/meshmesh-salesforce-wordmark-wht.png",
+        "onLight": "assets/logos/meshmesh-salesforce-wordmark-blk.png"
+      }
+    },
+    "mark": "Single-path evenodd mesh / triangular-lattice glyph. One color; recolors cleanly. Use the mark alone only for square/compact contexts (favicon, avatar, app icon, tight badges) where the full lockup will not fit.",
+    "variants": {
+      "white": "assets/logos/logo-white.svg",
+      "dark": "assets/logos/logo-dark.svg",
+      "coral": "assets/logos/logo-coral.svg",
+      "favicon": "assets/logos/favicon.svg"
+    },
+    "usage": "Prefer the primary co-branded lockup. White lockup on dark backgrounds (default, dark-first), black lockup on light. Use the mark alone only when a horizontal lockup will not fit. The 'from Salesforce' endorsement (cloud #00B3FF, navy #001E5B) is part of the lockup art — do not recolor or separate it. Keep clear space of at least the mark height ÷ 2 on all sides. Never stretch, rotate, or recolor outside the approved variants.",
+    "hosting": "Replace the relative paths with public HTTPS URLs when a template is used outside this folder (email clients require absolute URLs)."
+  },
+  "coverArt": {
+    "description": "Official MeshMesh cover / banner art — abstract liquid-glass forms on retro-wave stripes. Used for collection covers, recipe covers, and hero banners. 3:2 landscape. Left side is a text-safe negative-space zone; overlay titles there with a dark left-to-right scrim so white type stays legible on every colorway (see templates/cover-template.html).",
+    "aspectRatio": "3:2",
+    "textSafeZone": "left ~40% — apply linear-gradient(90deg, rgba(10,10,10,0.74), rgba(10,10,10,0.40) 40%, transparent 66%) as a scrim under the text",
+    "formats": { "web": "*.webp (1536×1024)", "highRes": "* Large.png (1280×853)" },
+    "colorways": [
+      { "name": "amber", "theme": "editorial / warm — reports, impact, flagship", "web": "assets/covers/MeshMesh Cover.webp", "highRes": "assets/covers/MeshMesh Cover Large.png" },
+      { "name": "blue", "theme": "Salesforce-aligned — endorsement, cross-cloud", "web": "assets/covers/MeshMesh Cover 2.webp", "highRes": "assets/covers/MeshMesh Cover 2 Large.png" },
+      { "name": "teal", "theme": "data / positive — Data Cloud, metrics, growth", "web": "assets/covers/MeshMesh Cover3.webp", "highRes": "assets/covers/MeshMesh Cover3 Large.png" }
+    ],
+    "concepts": "assets/covers-ideas/ holds 10 generated vector cover concepts (not the official art)."
+  },
+  "landingPage": {
+    "description": "Conventions for a one-page marketing/landing site in the kit, as built in examples/meshmesh-landing.html. Dark-first, cover-art hero, single accent restraint. Self-contained: for offline/Quick-Look-safe delivery, inline all assets (logo lockup + cover art) as base64 data URIs so the file has no external subresources.",
+    "example": "examples/meshmesh-landing.html",
+    "hero": {
+      "background": "Full-bleed cover art (blue colorway, 'MeshMesh Cover 2') pinned right center / cover, over the #0A0A0A canvas.",
+      "scrim": "Two stacked scrims keep left-aligned white type legible over the art: horizontal linear-gradient(90deg, rgba(10,10,10,0.96) 0%, 0.90 42%, 0.62 66%, 0.12 100%) plus a bottom vertical fade linear-gradient(0deg, #0A0A0A 0%, rgba(10,10,10,0.35) 14%, transparent 34%).",
+      "headline": "Headline is solid white — do NOT color or highlight individual words. A mono kicker (// …) sits above it; the numbered section eyebrow was dropped."
+    },
+    "metrics": {
+      "numeralColor": "#FFFFFF",
+      "note": "On the landing page, hero stats and ROI figures are WHITE (var(--mm-fg)), not mint/coral — the cover art and coral CTAs already carry the color, so white numerals read cleaner. Units (e.g. 'hrs') and labels stay muted/subtle. This is a landing-page choice; long-form reports still follow the master convention (coral or mint numerals)."
+    },
+    "integrationMarquee": {
+      "description": "Product/integration logos scroll horizontally in a single row rather than wrapping/stacking — avoids the row getting chopped off on narrow viewports.",
+      "technique": "Two identical .marquee-track flex rows (second aria-hidden) inside an overflow:hidden .marquee, animated transform:translateX(0 → -100%) at ~40s linear infinite for a seamless loop. Edge fade via mask-image linear-gradient. Pause on hover. prefers-reduced-motion: reduce → drop the animation and fall back to overflow-x:auto."
+    },
+    "videoEmbed": {
+      "method": "YouTube <iframe> embed (youtube.com/embed/<id>?rel=0).",
+      "rationale": "Prefer a YouTube iframe over an inline <video> with a remote src. In the macOS Quick Look sandbox a remote <video> src degrades the whole document's styling (author links/buttons render unstyled); a YouTube iframe does not. YouTube error 153 only appears when viewing over file:// (null origin) — serve over http (e.g. python3 -m http.server) and it plays."
+    },
+    "footer": {
+      "description": "Footer leads with the white co-branded lockup + one-line tagline on the left and a compact two-column link nav on the right, above a mono compliance/copyright row.",
+      "gotcha": "Scope the sticky-header styles to the header only. A global `nav {position:sticky; top:0}` rule will also catch a footer <nav> and stick it to the top of the viewport — use a <div> (e.g. .foot-nav) for the footer link group, not <nav>."
+    }
+  },
+  "messaging": {
+    "description": "Foundational brand messaging & copy governance. LLM-ready: rules are binary/deterministic, every pillar ships Do/Don't examples, and the whole system is mirrored in a machine-readable schema. Full docs in messaging/. Derived from 'Meet MeshMesh' (v.07242026) and 'MeshMesh Product & Technology Overview' (Jul 2026).",
+    "files": {
+      "positioning": "messaging/01-positioning.md",
+      "messagingHouse": "messaging/02-messaging-house.md",
+      "voiceAndTone": "messaging/03-voice-and-tone.md",
+      "lexicon": "messaging/04-lexicon.md",
+      "schema": "messaging/brand-governance.xml"
+    },
+    "positioningStatement": "For Salesforce Solution Engineers, Technical Architects, Admins, Trailblazers, Partners, FDEs, Professional Services, Customer Success, and Account teams, MeshMesh is the Headless 360 orchestration platform that plans and executes end-to-end Salesforce work from plain-language intent, because it pairs deep validated knowledge of 40+ Salesforce products with a three-context intelligence model that compounds with every run and stops only when outcomes are verified.",
+    "category": "Headless 360 orchestration platform",
+    "coreMessage": "MeshMesh collapses Salesforce setup from months to minutes. You define the outcome, approve the plan, and MeshMesh executes it end-to-end — and gets better with every run.",
+    "maestro": {
+      "initiative": "Maestro",
+      "vision": "We make the complex, Salesforce simple.",
+      "definition": "Salesforce's new AI-native, agent-driven initiative to make using and implementing any Salesforce product simple.",
+      "meshmeshRole": "MeshMesh is part of Maestro — the engine proving it works, today.",
+      "valueMotion": "Diagnose → Fix → Innovate",
+      "approvedLine": "Maestro is the vision. MeshMesh is the engine proving it works, today.",
+      "note": "Lead with Maestro at the strategy/executive level, MeshMesh at the product level. Keep the Maestro value motion (Diagnose → Fix → Innovate) distinct from the MeshMesh task flow (Define → Approve → Execute)."
+    },
+    "pillars": [
+      "Salesforce-first, not code-first",
+      "Autonomous end-to-end execution (it finishes the job)",
+      "Built for business users, in plain language",
+      "Compounding intelligence (gets better with every run)"
+    ],
+    "voiceRules": [
+      "Address the reader in second person.",
+      "Lead with an outcome or a number, not an adjective.",
+      "Metrics as numerals + unit/multiplier (90%, 11x, 40+).",
+      "Active voice in headlines and CTAs.",
+      "One value claim per sentence; no stacked superlatives.",
+      "Keep sentences short — aim for ~10 words (principle, not a hard gate); one idea per sentence.",
+      "Zero words from the forbidden list.",
+      "Concrete verbs (plan, build, configure, deploy, test, document).",
+      "Pair any 'autonomous' claim with the human approval gate.",
+      "Every statistic in long-form carries its source/qualifier.",
+      "Keep it sparse — cut every removable word. Less is more.",
+      "Plain English at a high-school reading level; no corporate jargon or flowery words.",
+      "Sound human, not generated — no LLM-tell phrases (delve, unlock, empower, elevate, 'in today's fast-paced world', etc.)."
+    ],
+    "forbiddenList": ["game-changing", "revolutionary", "supercharge", "seamlessly", "seamless", "leverage", "utilize", "robust", "paradigm", "synergy", "cutting-edge", "disruptive", "best-in-class", "world-class", "next-gen", "turnkey", "frictionless", "effortless", "magic", "unparalleled", "state-of-the-art", "100% secure", "unhackable", "fully autonomous", "set-and-forget"],
+    "lexiconHighlights": {
+      "MeshMesh": "one word, both M's capital — never 'Mesh Mesh' or 'Meshmesh'",
+      "Salesforce": "always 'Salesforce' in external copy — never 'SFDC' or 'salesforce.com'",
+      "sandbox": "'Salesforce sandbox' and 'sandbox syncing' are correct; do NOT call MeshMesh's own runtime a 'sandbox' (use 'secure, isolated environment')",
+      "Agentforce": "a partner concept, not a rival — 'MeshMesh doesn't replace Agentforce, it builds Agentforce… and beyond'"
+    }
+  },
+  "tailwind": {
+    "theme": {
+      "extend": {
+        "colors": {
+          "brand": "#FA6863",
+          "coral": {
+            "50": "#FFF1EF", "100": "#FFDED9", "200": "#FFBCB3", "300": "#FF988C",
+            "400": "#FD7A70", "500": "#FA6863", "600": "#E5473F", "700": "#C93B34",
+            "800": "#A32F2A", "900": "#7D2622", "950": "#4D1512"
+          },
+          "mint": {
+            "50": "#E9FBF3", "100": "#C9F5E1", "200": "#96ECC6", "300": "#5EDDA8",
+            "400": "#3AD598", "500": "#1FB87E", "600": "#159566", "700": "#137553",
+            "800": "#125C43", "900": "#0F4A38", "950": "#062A20"
+          },
+          "amber": {
+            "50": "#FBF3E9", "100": "#F5E2C8", "200": "#EAC393", "300": "#DDA262",
+            "400": "#D38C49", "500": "#B6753B", "600": "#985F30", "700": "#7A4C28",
+            "800": "#5F3C22", "900": "#4A301D", "950": "#2A1A10"
+          },
+          "ink": "#0A0A0A",
+          "surface": "#141414",
+          "surface-2": "#1C1C1C"
+        },
+        "fontFamily": {
+          "sans": ["Geist Sans", "Geist", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
+          "mono": ["Geist Mono", "SF Mono", "Monaco", "monospace"]
+        },
+        "borderRadius": { "DEFAULT": "0.475rem", "card": "1rem" }
+      }
+    }
+  },
+  "cssVariables": {
+    "--mm-primary": "#FA6863",
+    "--mm-accent": "#3AD598",
+    "--mm-amber": "#D38C49",
+    "--mm-bg": "#0A0A0A",
+    "--mm-surface": "#141414",
+    "--mm-fg": "#FFFFFF",
+    "--mm-muted": "#A1A1A1",
+    "--mm-border": "#262626",
+    "--mm-radius": "0.475rem",
+    "--mm-radius-card": "1rem",
+    "--mm-font-sans": "'Geist Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+    "--mm-font-mono": "'Geist Mono', 'SF Mono', Monaco, monospace"
+  },
+  "salesforceTheme": {
+    "note": "Slot mapping for the 'Configure Salesforce UI Theme' recipe (SLDS 1 exposes 3 color slots).",
+    "primary": "#FA6863",
+    "secondary": "#0A0A0A",
+    "background": "#0A0A0A"
+  }
+}

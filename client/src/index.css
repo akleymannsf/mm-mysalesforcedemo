@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,71 +7,57 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    /* Offset so sticky navbar doesn't cover anchored section headings */
-    scroll-padding-top: 5.5rem;
+    scroll-padding-top: 5rem;
   }
 
   body {
-    @apply bg-white text-brand-ink font-sans antialiased;
-    text-rendering: optimizeLegibility;
+    @apply bg-ink text-fg font-sans antialiased;
+    line-height: 1.6;
   }
 
-  /* Section anchor offset for jump links */
   section[id] {
-    scroll-margin-top: 5.5rem;
+    scroll-margin-top: 5rem;
+  }
+
+  ::selection {
+    background: #fa6863;
+    color: #0a0a0a;
   }
 }
 
 @layer components {
-  .container-xl {
-    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  .wrap {
+    @apply mx-auto w-full max-w-wrap px-6;
   }
 
+  /* Mono uppercase section label, coral */
   .eyebrow {
-    @apply inline-flex items-center gap-2 rounded-full border border-brand-blue/20 bg-brand-blue/5
-      px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-brand-blue;
+    @apply font-mono text-[0.72rem] font-medium uppercase tracking-[0.16em] text-coral;
   }
 
+  /* Mono muted kicker (// …) */
+  .kicker {
+    @apply font-mono text-[0.72rem] tracking-[0.08em] text-subtle;
+  }
+
+  /* Short coral rule above section headings */
+  .rule {
+    @apply mb-[18px] h-0.5 w-[38px] bg-coral;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-[22px] py-[11px] text-[0.95rem]
+      font-semibold transition-colors duration-150;
+  }
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-brand-blue px-6 py-3
-      text-sm font-bold text-white shadow-glow-blue transition-all duration-300
-      hover:-translate-y-0.5 hover:bg-brand-blue-dark hover:shadow-glow focus:outline-none
-      focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2;
+    @apply bg-coral text-ink hover:bg-coral-hover;
   }
-
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-brand-navy/15
-      bg-white/70 px-6 py-3 text-sm font-bold text-brand-navy backdrop-blur
-      transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-blue/40 hover:text-brand-blue;
+    @apply border border-line text-fg hover:border-muted;
   }
 
-  /* Animated AI gradient text */
-  .text-gradient-ai {
-    @apply bg-gradient-to-r from-brand-blue via-brand-cyan to-brand-teal bg-clip-text text-transparent;
-    background-size: 200% auto;
-    @apply animate-gradient-x;
-  }
-
-  /* Glass surface */
-  .glass {
-    @apply border border-white/60 bg-white/70 backdrop-blur-xl;
-  }
-
-  .glass-dark {
-    @apply border border-white/10 bg-white/5 backdrop-blur-xl;
-  }
-}
-
-@layer utilities {
-  .mask-fade-x {
-    -webkit-mask-image: linear-gradient(
-      to right,
-      transparent,
-      black 8%,
-      black 92%,
-      transparent
-    );
-    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  .card {
+    @apply rounded-card border border-line bg-surface;
   }
 }
 
@@ -79,10 +65,7 @@
   html {
     scroll-behavior: auto;
   }
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
+  .animate-mm-marquee {
+    animation: none !important;
   }
 }

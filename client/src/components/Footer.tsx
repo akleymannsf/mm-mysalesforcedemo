@@ -1,61 +1,64 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import logo from '../assets/logo.png';
-import { NAV_SECTIONS } from '../lib/sections';
+import lockup from '../assets/brand/lockup-white.svg';
+
+const FOOT_LINKS = [
+  { id: 'overview', label: 'Overview' },
+  { id: 'demo', label: 'Demo' },
+  { id: 'approach', label: 'Approach' },
+  { id: 'testimonials', label: 'Testimonials' },
+  { id: 'roi', label: 'ROI' },
+  { id: 'features', label: 'Features' },
+  { id: 'security', label: 'Security' },
+];
 
 export default function Footer() {
   const [showTop, setShowTop] = useState(false);
-
   useEffect(() => {
-    const onScroll = () => setShowTop(window.scrollY > 600);
+    const onScroll = () => setShowTop(window.scrollY > 700);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   return (
-    <footer className="relative">
-      {/* White logo band above the navy footer */}
-      <div className="bg-white py-10">
-        <div className="container-xl flex justify-center md:justify-start">
-          <img src={logo} alt="MeshMesh from Salesforce" className="h-9 w-auto sm:h-10" />
-        </div>
-      </div>
-
-      <div className="bg-brand-navy py-14 text-white">
-      <div className="container-xl">
-        <div className="flex flex-col items-center justify-between gap-8 border-b border-white/10 pb-10 md:flex-row md:items-start">
-          <div className="text-center md:text-left">
-            <p className="max-w-xs text-sm text-white/60">
+    <footer className="border-t border-line bg-[#070707] pb-10 pt-16">
+      <div className="wrap">
+        <div className="flex flex-wrap items-start justify-between gap-12 border-b border-line pb-10">
+          <div className="max-w-[36ch]">
+            <img
+              src={lockup}
+              alt="MeshMesh from Salesforce"
+              className="mb-[18px] h-10 w-auto max-w-none"
+            />
+            <p className="text-[0.98rem] text-muted">
               The agentic AI assistant for the Salesforce enterprise and beyond. Plan and build by
               simply asking.
             </p>
           </div>
 
-          <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-            {NAV_SECTIONS.map((s) => (
+          <div className="grid grid-cols-2 gap-x-11 gap-y-3.5">
+            {FOOT_LINKS.map((l) => (
               <a
-                key={s.id}
-                href={`#${s.id}`}
-                className="text-sm font-medium text-white/70 transition-colors hover:text-brand-cyan"
+                key={l.id}
+                href={`#${l.id}`}
+                className="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-subtle transition-colors hover:text-fg"
               >
-                {s.label}
+                {l.label}
               </a>
             ))}
-          </nav>
+          </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-4 pt-6 text-center sm:flex-row sm:text-left">
-          <p className="text-xs text-white/50">
-            © {new Date().getFullYear()} MeshMesh — a Salesforce Product. All rights reserved.
-          </p>
-          <p className="text-xs text-white/50">
+        <div className="flex flex-wrap items-center justify-between gap-4 pt-7">
+          <span className="font-mono text-[0.68rem] tracking-[0.1em] text-subtle">
+            © {new Date().getFullYear()} MeshMesh — a Salesforce product
+          </span>
+          <span className="font-mono text-[0.68rem] tracking-[0.1em] text-subtle">
             SOC 2 · ISO 42001 · Zero Training · Zero Retention
-          </p>
+          </span>
         </div>
       </div>
-      </div>
 
-      {/* Back to top */}
       <AnimatePresence>
         {showTop && (
           <motion.a
@@ -63,13 +66,10 @@ export default function Footer() {
             initial={{ opacity: 0, scale: 0.6, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.6, y: 20 }}
-            whileHover={{ y: -3 }}
             aria-label="Back to top"
-            className="fixed bottom-6 right-6 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-brand-blue text-white shadow-glow-blue"
+            className="fixed bottom-6 right-6 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-coral text-lg text-ink"
           >
-            <span aria-hidden className="text-lg">
-              ↑
-            </span>
+            ↑
           </motion.a>
         )}
       </AnimatePresence>
