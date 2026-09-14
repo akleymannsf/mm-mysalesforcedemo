@@ -13,7 +13,7 @@ export default function Demo() {
       <div className="wrap">
         <SectionHead
           eyebrow="Fig.01 — BrowserMesh, live"
-          lede="MeshMesh is like a team of junior developers, acting on your plan, doing every click, testing its own work, and documenting every step. You’re always in the loop — collaboratively planning and validating the output before anything goes live."
+          lede="MeshMesh is like a team of developers, acting on your plan, doing every click, testing its own work, and documenting every step. You’re always in the loop — collaboratively planning and validating the output before anything goes live."
         >
           Watch as the work gets done.
         </SectionHead>
