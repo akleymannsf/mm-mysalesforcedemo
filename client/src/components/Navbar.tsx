@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import lockup from '../assets/brand/lockup-white.svg';
 import { NAV_SECTIONS } from '../lib/sections';
 import { useActiveSection } from '../hooks/useActiveSection';
+import { scrollToCenter } from '../lib/scroll';
 
 const SECTION_IDS = NAV_SECTIONS.map((s) => s.id);
 
@@ -43,7 +44,11 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <a href="#demo" className="btn btn-primary hidden sm:inline-flex">
+          <a
+            href="#demo-video"
+            onClick={(e) => scrollToCenter(e, 'demo-video')}
+            className="btn btn-primary hidden sm:inline-flex"
+          >
             See it in action <span aria-hidden>→</span>
           </a>
           <button
@@ -82,8 +87,17 @@ export default function Navbar() {
               ))}
             </div>
             <a
-              href="#demo"
-              onClick={() => setOpen(false)}
+              href="#demo-video"
+              onClick={(e) => {
+                e.preventDefault();
+                setOpen(false);
+                // defer until the body scroll-lock is released
+                setTimeout(() => {
+                  document
+                    .getElementById('demo-video')
+                    ?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 60);
+              }}
               className="btn btn-primary mx-6 mt-6 w-[calc(100%-3rem)]"
             >
               See it in action →

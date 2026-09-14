@@ -1,4 +1,5 @@
 import coverBlue from '../assets/brand/cover-blue.webp';
+import { scrollToCenter } from '../lib/scroll';
 
 const STATS = [
   { num: '3,500+', lbl: 'Builders daily' },
@@ -37,7 +38,11 @@ export default function Hero() {
         </p>
 
         <div className="mb-14 flex flex-wrap gap-3.5">
-          <a href="#demo" className="btn btn-primary">
+          <a
+            href="#demo-video"
+            onClick={(e) => scrollToCenter(e, 'demo-video')}
+            className="btn btn-primary"
+          >
             See it in action <span aria-hidden>→</span>
           </a>
           <a href="#approach" className="btn btn-ghost">

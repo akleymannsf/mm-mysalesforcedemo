@@ -18,7 +18,7 @@ export default function Demo() {
           Watch as the work gets done.
         </SectionHead>
 
-        <div className="card mt-10 overflow-hidden bg-[#0C0C0C]">
+        <div id="demo-video" className="card mt-10 scroll-mt-0 overflow-hidden bg-[#0C0C0C]">
           <iframe
             className="block aspect-video w-full border-0 bg-ink"
             src={YOUTUBE_EMBED}
