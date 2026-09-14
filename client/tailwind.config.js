@@ -13,12 +13,6 @@ export default {
           cyan: '#16D6FA',
           teal: '#2DD4BF',
         },
-        // v2 editorial palette
-        // deep navy derived from the MeshMesh logo blue (#205090), darkened for a canvas
-        ink: '#041223',
-        paper: '#F4F1EA',
-        // signature accent (kept under the `acid` key to avoid churn) — electric blue
-        acid: '#1B96FF',
       },
       fontFamily: {
         sans: [
@@ -30,9 +24,6 @@ export default {
           '"Segoe UI"',
           'sans-serif',
         ],
-        grotesk: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
-        display: ['"Instrument Serif"', 'Georgia', 'Cambria', 'serif'],
-        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       boxShadow: {
         glow: '0 0 40px -8px rgba(22, 214, 250, 0.55)',
