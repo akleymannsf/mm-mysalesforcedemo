@@ -1,0 +1,19 @@
+---
+description: Deployment workflow — never build locally, push to git/Heroku
+alwaysApply: true
+---
+
+# Deploy Workflow
+
+The user never builds locally. Do NOT run local build commands.
+
+- ❌ Do not run `npm run build`, `npm --prefix client run build`, `tsc -b`, `vite build`, or any local build/preview step to "verify" changes.
+- ✅ After making code changes, just `git add`, `git commit`, and `git push origin main`. Heroku auto-deploys from `main`.
+- Verification happens on the live site (auto-deploy), not locally.
+
+To catch errors without a full build, use lightweight, non-build checks instead:
+
+- Use the `ReadLints` tool on changed files.
+- Use type/lint checks only if they don't trigger a bundle build.
+
+If a build is ever truly required, ask the user first.
